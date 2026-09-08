@@ -1,0 +1,344 @@
+{
+  "common": {
+    "Header": {
+      "logo": "FixPoint",
+      "logoImage": "https://placehold.co/150x40/transparent/0066ff?text=FixPoint",
+      "menu": [
+        { "label": "Home", "href": "/" },
+        { "label": "About", "href": "/about" },
+        { "label": "Services", "href": "/services" },
+        { "label": "Team", "href": "/team" },
+        { "label": "Blog", "href": "/blog" },
+        { "label": "Career", "href": "/career" },
+        { "label": "Contact", "href": "/contact" }
+      ],
+      "button": {
+        "label": "Book a Repair",
+        "href": "/book"
+      },
+      "contactInfo": {
+        "address": "123 Repair Street, Tech City, India",
+        "phone": "+91 98765 43210",
+        "email": "support@fixpoint.com",
+        "timing": "Mon - Sat: 9:00 AM - 7:00 PM"
+      }
+    },
+    "Footer": {
+      "logo": "FixPoint",
+      "logoImage": "https://placehold.co/150x40/transparent/0066ff?text=FixPoint",
+      "description": "Your trusted partner for fast, reliable and affordable mobile repair services. We fix, you relax!",
+      "quickLinks": [
+        { "label": "Home", "href": "/" },
+        { "label": "About Us", "href": "/about" },
+        { "label": "Services", "href": "/services" },
+        { "label": "Blog", "href": "/blog" },
+        { "label": "Contact Us", "href": "/contact" }
+      ],
+      "servicesLinks": [
+        { "label": "Screen Repair", "href": "/services/screen", "icon": "Smartphone" },
+        { "label": "Battery Replacement", "href": "/services/battery", "icon": "Battery" },
+        { "label": "Water Damage", "href": "/services/water", "icon": "Droplet" },
+        { "label": "Software Issues", "href": "/services/software", "icon": "Settings" },
+        { "label": "Charging Port Repair", "href": "/services/charging", "icon": "Plug" }
+      ],
+      "contact": {
+        "address": "123 Repair Street,\nTech City, India",
+        "phone": "+91 98765 43210",
+        "email": "info@fixpro.com",
+        "workingHours": "Mon - Sat: 9:00 AM - 7:00 PM"
+      },
+      "socialLinks": [
+        { "platform": "facebook", "url": "#" },
+        { "platform": "twitter", "url": "#" },
+        { "platform": "instagram", "url": "#" },
+        { "platform": "youtube", "url": "#" }
+      ],
+      "newsletter": {
+        "title": "Newsletter",
+        "description": "Subscribe to get updates and exclusive offers."
+      },
+      "bottomFeatures": [
+        {
+          "title": "Genuine Parts",
+          "description": "100% original parts used",
+          "icon": "ShieldCheck"
+        },
+        {
+          "title": "Expert Technicians",
+          "description": "Skilled & experienced team",
+          "icon": "UserCog"
+        },
+        {
+          "title": "90 Days Warranty",
+          "description": "On all repair services",
+          "icon": "Award"
+        },
+        {
+          "title": "Quick Turnaround",
+          "description": "Faster repair, save time",
+          "icon": "Zap"
+        }
+      ],
+      "copyright": "Copyright © 2026. All rights reserved. Powered by Lestow",
+      "labels": {
+        "quickLinks": "Quick Links",
+        "ourServices": "Our Services",
+        "contactUs": "Contact Us",
+        "newsletter": "Newsletter",
+        "subscribeBtn": "Subscribe",
+        "newsletterPlaceholder": "Enter your email"
+      }
+    }
+  },
+  "categories": {
+    "Repair": {
+      "sections": {
+        "Hero": {
+          "variants": {
+            "RepairHero": {
+              "badge": "WE FIX MOBILE PHONES",
+              "titlePart1": "We Fix. ",
+              "titleHighlight": "You Relax.",
+              "description": "Fast, reliable, and professional mobile repair services at your doorstep. Quality service, affordable price.",
+              "buttonPrimary": {
+                "label": "Book a Repair",
+                "href": "/book"
+              },
+              "buttonSecondary": {
+                "label": "Watch Video",
+                "href": "#"
+              },
+              "features": [
+                {
+                  "icon": "Search",
+                  "title": "Free Diagnostics",
+                  "description": "On all devices"
+                },
+                {
+                  "icon": "BadgeCheck",
+                  "title": "90 Days Warranty",
+                  "description": "On all repairs"
+                },
+                {
+                  "icon": "ShieldCheck",
+                  "title": "Genuine Parts",
+                  "description": "100% Original"
+                },
+                {
+                  "icon": "Headset",
+                  "title": "Quick Support",
+                  "description": "Fast turn-around"
+                }
+              ],
+              "image": "https://images.unsplash.com/photo-1597740985671-2a8a3b80502e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            }
+          }
+        },
+        "About": {
+          "variants": {
+            "RepairAbout": {
+              "subtitle": "ABOUT US",
+              "title": "We Provide Expert Mobile Repair Services",
+              "description": "At FixPoint, we understand how important your smartphone is to you. That's why we offer fast, reliable, and affordable repair solutions. With expert technicians and genuine parts.",
+              "features": [
+                { "text": "Certified & Experienced Technicians" },
+                { "text": "Quick & Reliable Service" },
+                { "text": "Affordable Pricing" },
+                { "text": "Customer Satisfaction Guaranteed" }
+              ],
+              "buttonText": "Learn More",
+              "buttonLink": "/about",
+              "experienceYears": "10+",
+              "experienceText": "Years of Experience",
+              "images": [
+                "/about/a1.png",
+                "/about/a2.png",
+                "/about/a3.png"
+              ]
+            }
+          }
+        },
+        "Services": {
+          "variants": {
+            "RepairServices": {
+              "subtitle": "OUR SERVICE",
+              "titlePart1": "Keeping Your ",
+              "titleHighlight": "Device Running",
+              "titlePart2": "With ",
+              "titleHighlight2": "Smoothly",
+              "titlePart3": "",
+              "items": [
+                {
+                  "id": 1,
+                  "title": "Screen Repair",
+                  "description": "Fast and reliable screen replacement with high quality parts, returned to look brand new.",
+                  "icon": "Smartphone",
+                  "image": "/services/s1.png"
+                },
+                {
+                  "id": 2,
+                  "title": "Battery Replacement",
+                  "description": "Professional battery replacements to keep the power running in your device.",
+                  "icon": "Battery",
+                  "image": "/services/s2.png"
+                },
+                {
+                  "id": 3,
+                  "title": "Software Repair",
+                  "description": "Expert software diagnostics and troubleshooting to ensure your device is performing optimally.",
+                  "icon": "Cpu",
+                  "image": "/services/s3.png"
+                }
+              ]
+            }
+          }
+        },
+        "Stats": {
+          "variants": {
+            "RepairStats": {
+              "items": [
+                {
+                  "id": 1,
+                  "value": "15,000+",
+                  "label": "Devices Repaired",
+                  "icon": "Smartphone"
+                },
+                {
+                  "id": 2,
+                  "value": "12+",
+                  "label": "Expert Technicians",
+                  "icon": "Users"
+                },
+                {
+                  "id": 3,
+                  "value": "10+",
+                  "label": "Years of Experience",
+                  "icon": "Trophy"
+                },
+                {
+                  "id": 4,
+                  "value": "99%",
+                  "label": "Happy Customers",
+                  "icon": "Smile"
+                }
+              ]
+            }
+          }
+        },
+        "Team": {
+          "variants": {
+            "RepairTeam": {
+              "subtitle": "OUR TEAM",
+              "title": "Meet Our Skilled Technicians for Your Device Needs",
+              "description": "Our certified technicians bring expertise, precision, and care to every repair, ensuring your devices are in the best hands.",
+              "members": [
+                {
+                  "id": 1,
+                  "name": "Alex Johnson",
+                  "role": "Mobile Repair Specialist",
+                  "image": "/team/t1.png",
+                  "socials": [
+                    { "platform": "facebook", "url": "#" },
+                    { "platform": "instagram", "url": "#" },
+                    { "platform": "linkedin", "url": "#" },
+                    { "platform": "twitter", "url": "#" }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "name": "Ryan Mitchell",
+                  "role": "Chief Lead Technician",
+                  "image": "/team/t2.png",
+                  "socials": [
+                    { "platform": "facebook", "url": "#" },
+                    { "platform": "instagram", "url": "#" },
+                    { "platform": "linkedin", "url": "#" },
+                    { "platform": "twitter", "url": "#" }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "name": "James Carter",
+                  "role": "Hardware Repair Expert",
+                  "image": "/team/t3.png",
+                  "socials": [
+                    { "platform": "facebook", "url": "#" },
+                    { "platform": "instagram", "url": "#" },
+                    { "platform": "linkedin", "url": "#" },
+                    { "platform": "twitter", "url": "#" }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "name": "Daniel Roberts",
+                  "role": "Software Repair Engineer",
+                  "image": "/team/t4.png",
+                  "socials": [
+                    { "platform": "facebook", "url": "#" },
+                    { "platform": "instagram", "url": "#" },
+                    { "platform": "linkedin", "url": "#" },
+                    { "platform": "twitter", "url": "#" }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "Blog": {
+          "variants": {
+            "RepairBlog": {
+              "subtitle": "FROM OUR BLOG",
+              "title": "Latest Blog & News",
+              "description": "Tips, guides, and insights to keep your devices in the best condition.",
+              "items": [
+                {
+                  "id": 1,
+                  "title": "6 Signs Your Phone Battery Needs Replacement",
+                  "description": "Know the top signs that indicate your phone battery needs a replacement.",
+                  "image": "/blog/b1.png",
+                  "date": "May 24, 2024",
+                  "category": "Maintenance",
+                  "link": "/blog/battery-replacement"
+                },
+                {
+                  "id": 2,
+                  "title": "How to Protect Your Phone from Water Damage",
+                  "description": "Simple tips to protect your phone from water damage and what to do...",
+                  "image": "/blog/b2.png",
+                  "date": "May 15, 2024",
+                  "category": "Tips",
+                  "link": "/blog/water-damage"
+                },
+                {
+                  "id": 3,
+                  "title": "Why Choose Professional Mobile Repair Services?",
+                  "description": "Top reasons why professional repair is better than DIY solutions.",
+                  "image": "/blog/b3.png",
+                  "date": "May 10, 2024",
+                  "category": "Services",
+                  "link": "/blog/professional-repair"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "templateComponents": {
+        "template-1": {
+          "pages": {
+            "home": {
+              "components": [
+                { "key": "Hero", "component": "RepairHero" },
+                { "key": "About", "component": "RepairAbout" },
+                { "key": "Services", "component": "RepairServices" },
+                { "key": "Stats", "component": "RepairStats" },
+                { "key": "Team", "component": "RepairTeam" },
+                { "key": "Blog", "component": "RepairBlog" }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
