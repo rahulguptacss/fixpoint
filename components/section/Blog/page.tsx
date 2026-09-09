@@ -59,7 +59,7 @@ export default function Blog({ data }: { data: BlogData }) {
                     href={post.link}
                     className="inline-flex items-center text-[#1877F2] font-bold text-[16px] hover:text-blue-800 transition-colors"
                   >
-                    Read More <ArrowRight className="w-5 h-5 ml-1.5" />
+                    {data.readMoreText || "Read More"} <ArrowRight className="w-5 h-5 ml-1.5" />
                   </Link>
                 </div>
               </div>
@@ -74,7 +74,7 @@ export default function Blog({ data }: { data: BlogData }) {
             className="inline-flex items-center justify-center bg-[#1877F2] text-white px-8 py-3.5 rounded-lg font-bold text-[16px] hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300 shadow-md"
           >
             <LayoutGrid className="w-5 h-5 mr-2" strokeWidth={2.5} />
-            View All Blogs
+            {data.viewAllButtonText || "View All Blogs"}
           </Link>
         </div>
         

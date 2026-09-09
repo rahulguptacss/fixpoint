@@ -71,18 +71,18 @@ export default function Hero({ data }: { data: HeroData }) {
         <div className="w-full md:w-[60%] lg:w-[50%]">
           {/* Badge */}
           <div className="animate-fade-in-up inline-block bg-[#1877F2] text-white text-[13px] font-semibold px-4 py-1.5 rounded-md mb-6 shadow-sm">
-            #1 Mobile Repair Service
+            {data.badge}
           </div>
           
           {/* Title */}
           <h1 className="animate-fade-in-up delay-100 text-[56px] md:text-[64px] font-bold leading-[1.1] mb-6 tracking-tight">
-            We Fix<span className="text-[#1877F2]">.</span><br />
-            You Relax<span className="text-[#1877F2]">.</span>
+            {data.titlePart1}<span className="text-[#1877F2]">.</span><br />
+            {data.titleHighlight}<span className="text-[#1877F2]">.</span>
           </h1>
           
           {/* Description */}
           <p className="animate-fade-in-up delay-200 text-[18px] text-gray-300 mb-10 leading-relaxed max-w-lg">
-            Trusted mobile repair experts delivering fast, reliable and affordable solutions for all major brands.
+            {data.description}
           </p>
           
           {/* Buttons */}
@@ -91,7 +91,7 @@ export default function Hero({ data }: { data: HeroData }) {
               href={data.buttonPrimary.href}
               className="inline-flex w-fit bg-[#1877F2] hover:bg-blue-600 text-white font-semibold text-[16px] py-[14px] px-[32px] rounded-md items-center transition-all duration-300 shadow-[0_4px_14px_0_rgba(24,119,242,0.39)] hover:shadow-[0_6px_20px_rgba(24,119,242,0.23)] hover:-translate-y-0.5"
             >
-              Book a Repair
+              {data.buttonPrimary.label}
               <LucideIcons.ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             
@@ -102,7 +102,7 @@ export default function Hero({ data }: { data: HeroData }) {
               <div className="bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-110">
                 <LucideIcons.Play className="w-5 h-5 ml-1 text-[#1877F2] fill-[#1877F2]" />
               </div>
-              Watch Our Video
+              {data.buttonSecondary.label}
             </button>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function Hero({ data }: { data: HeroData }) {
             </button>
             <iframe 
               className="w-full h-full"
-              src="https://www.youtube.com/embed/R2_4e1a0m6U?autoplay=1" 
+              src={data.videoUrl || "https://www.youtube.com/embed/R2_4e1a0m6U?autoplay=1"}  
               title="Repair Video" 
               frameBorder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

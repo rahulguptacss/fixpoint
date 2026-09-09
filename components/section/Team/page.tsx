@@ -2,6 +2,7 @@ import React from 'react';
 import * as LucideIcons from 'lucide-react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { TeamData } from '../../types';
+import Link from 'next/link';
 
 export default function Team({ data }: { data: TeamData }) {
   return (
@@ -32,11 +33,13 @@ export default function Team({ data }: { data: TeamData }) {
           {data.members.map((member) => (
             <div key={member.id} className="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group relative">
               <div className="h-64 overflow-hidden">
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                />
+                <Link href={`/team/${member.id}`}>
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" 
+                  />
+                </Link>
               </div>
               
               <div className="pt-6 px-6 pb-8 text-center bg-white rounded-b-xl">
@@ -62,7 +65,9 @@ export default function Team({ data }: { data: TeamData }) {
                   })}
                 </div>
                 
-                <h3 className="text-[22px] font-bold text-[#021731] mb-1">{member.name}</h3>
+                <Link href={`/team/${member.id}`}>
+                  <h3 className="text-[22px] font-bold text-[#021731] mb-1 hover:text-[#1877F2] transition-colors cursor-pointer">{member.name}</h3>
+                </Link>
                 <p className="text-[#1877F2] text-[15px] font-medium">{member.role}</p>
                 <div className="w-10 h-[2px] bg-[#1877F2] mx-auto mt-2 rounded-full"></div>
               </div>

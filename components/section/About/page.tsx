@@ -94,8 +94,8 @@ export default function About({ data }: { data: AboutData }) {
               <span className="text-white text-[52px] font-bold leading-none mb-3">
                 {count}{data.experienceYears.includes('+') ? '+' : ''}
               </span>
-              <span className="text-white/90 text-[16px] font-normal leading-relaxed">
-                Years of<br/>Experience
+              <span className="text-white/90 text-[16px] font-normal leading-relaxed whitespace-pre-line">
+                {data.experienceText.replace(' ', '\n')}
               </span>
             </div>
 

@@ -18,6 +18,7 @@ export interface HeaderData {
     email: string;
     timing?: string;
   };
+  socials: { platform: string; url: string }[];
 }
 
 export interface HeroFeature {
@@ -39,6 +40,7 @@ export interface HeroData {
     label: string;
     href: string;
   };
+  videoUrl?: string;
   features: HeroFeature[];
   image: string;
 }
@@ -88,12 +90,17 @@ export interface StatsData {
   items: StatItem[];
 }
 
+export interface SocialLink {
+  platform: string;
+  url: string;
+}
+
 export interface TeamMember {
   id: number;
   name: string;
   role: string;
   image: string;
-  socials: { platform: string; url: string }[];
+  socials: SocialLink[];
 }
 
 export interface TeamData {
@@ -101,6 +108,33 @@ export interface TeamData {
   title: string;
   description: string;
   members: TeamMember[];
+}
+
+export interface TeamDetailData {
+  name: string;
+  role: string;
+  image: string;
+  description: string;
+  contact: {
+    phone: string;
+    email: string;
+    location: string;
+  };
+  stats: {
+    experience: string;
+    specialization: string;
+    completedRepairs: string;
+  };
+  socials: SocialLink[];
+  about: {
+    paragraphs: string[];
+    features: string[];
+  };
+  education: {
+    title: string;
+    institute: string;
+    year: string;
+  }[];
 }
 
 export interface BlogItem {
@@ -113,11 +147,47 @@ export interface BlogItem {
   link: string;
 }
 
+export interface BreadcrumbPath {
+  label: string;
+  url: string;
+}
+
+export interface BreadcrumbData {
+  title: string;
+  paths: BreadcrumbPath[];
+  bgImage?: string;
+}
+
+export interface WhyChooseUsFeature {
+  text: string;
+}
+
+export interface WhyChooseUsProgress {
+  label: string;
+  percentage: number;
+}
+
+export interface WhyChooseUsData {
+  subtitle: string;
+  title: string;
+  features: WhyChooseUsFeature[];
+  progressBars: WhyChooseUsProgress[];
+  image: string;
+  videoLink?: string;
+  overlayCard: {
+    subtitle: string;
+    title: string;
+    description: string;
+  };
+}
+
 export interface BlogData {
   subtitle: string;
   title: string;
   description: string;
   items: BlogItem[];
+  viewAllButtonText?: string;
+  readMoreText?: string;
 }
 
 export interface FooterQuickLink {
@@ -160,6 +230,75 @@ export interface FooterData {
   };
 }
 
+export interface BrandItem {
+  name: string;
+  logo: string;
+}
+
+export interface SidebarServiceItem {
+  title: string;
+  icon: string;
+  link: string;
+}
+
+export interface SidebarDownloadItem {
+  title: string;
+  icon: string;
+  link: string;
+}
+
+export interface BrandsWeRepairData {
+  sidebar: {
+    services: {
+      title: string;
+      items: SidebarServiceItem[];
+    };
+    getInTouch: {
+      title: string;
+      description: string;
+      phone: string;
+      email: string;
+      address: string;
+      buttonText: string;
+      buttonLink: string;
+    };
+    whyChoose: {
+      title: string;
+      features: string[];
+    };
+    downloads: {
+      title: string;
+      items: SidebarDownloadItem[];
+    };
+  };
+  mainContent: {
+    hero: {
+      titlePart1: string;
+      titleHighlight: string;
+      description: string;
+      image: string;
+    };
+    brandsSection: {
+      title: string;
+      description: string;
+      brands: BrandItem[];
+    };
+    moreThanPhones: {
+      title: string;
+      description: string;
+      image: string;
+      devices: { name: string; icon: string }[];
+    };
+    cta: {
+      icon: string;
+      title: string;
+      description: string;
+      buttonText: string;
+      buttonLink: string;
+    };
+  };
+}
+
 export interface PageComponent {
   key: string;
   component: string;
@@ -177,16 +316,18 @@ export interface RepairTemplateData {
         About: { variants: { RepairAbout: AboutData } };
         Services: { variants: { RepairServices: ServicesData } };
         Stats: { variants: { RepairStats: StatsData } };
-        Team: { variants: { RepairTeam: TeamData } };
+        Team: { variants: { RepairTeam: TeamData; RepairTeamPage?: TeamData; } };
+        TeamDetail: { variants: { RepairTeamDetail: TeamDetailData } };
+        BrandsWeRepair: { variants: { RepairBrandsWeRepair: BrandsWeRepairData } };
         Blog: { variants: { RepairBlog: BlogData } };
+        Breadcrumb: { variants: { RepairBreadcrumb: BreadcrumbData; RepairBreadcrumbWhyChooseUs?: BreadcrumbData; RepairBreadcrumbOurTeams?: BreadcrumbData; RepairBreadcrumbTeamDetail?: BreadcrumbData; RepairBreadcrumbBrandsWeRepair?: BreadcrumbData; } };
+        WhyChooseUs: { variants: { RepairWhyChooseUs: WhyChooseUsData } };
       };
       templateComponents: {
         "template-1": {
-          pages: {
-            home: {
-              components: PageComponent[];
-            };
-          };
+          pages: Record<string, {
+            components: PageComponent[];
+          }>;
         };
       };
     };

@@ -5,7 +5,14 @@
       "logoImage": "https://placehold.co/150x40/transparent/0066ff?text=FixPoint",
       "menu": [
         { "label": "Home", "href": "/" },
-        { "label": "About", "href": "/about" },
+        { 
+          "label": "About", 
+          "href": "/about",
+          "subItems": [
+            { "label": "About Us", "href": "/about" },
+            { "label": "Why Choose Us", "href": "/why-choose-us" }
+          ]
+        },
         { "label": "Services", "href": "/services" },
         { "label": "Team", "href": "/team" },
         { "label": "Blog", "href": "/blog" },
@@ -21,7 +28,13 @@
         "phone": "+91 98765 43210",
         "email": "support@fixpoint.com",
         "timing": "Mon - Sat: 9:00 AM - 7:00 PM"
-      }
+      },
+      "socials": [
+        { "platform": "facebook", "url": "#" },
+        { "platform": "instagram", "url": "#" },
+        { "platform": "twitter", "url": "#" },
+        { "platform": "youtube", "url": "#" }
+      ]
     },
     "Footer": {
       "logo": "FixPoint",
@@ -105,9 +118,10 @@
                 "href": "/book"
               },
               "buttonSecondary": {
-                "label": "Watch Video",
+                "label": "Watch Our Video",
                 "href": "#"
               },
+              "videoUrl": "https://www.youtube.com/embed/R2_4e1a0m6U?autoplay=1",
               "features": [
                 {
                   "icon": "Search",
@@ -281,6 +295,163 @@
                   ]
                 }
               ]
+            },
+            "RepairTeamPage": {
+              "subtitle": "OUR TEAM",
+              "title": "Meet Our Skilled Technicians for Your Device Needs",
+              "description": "Our certified technicians bring expertise, precision, and care to every repair, ensuring your devices are in the best hands.",
+              "members": [
+                {
+                  "id": 1,
+                  "name": "Alex Johnson",
+                  "role": "Mobile Repair Specialist",
+                  "image": "/team/t1.png",
+                  "socials": [
+                    { "platform": "facebook", "url": "#" },
+                    { "platform": "instagram", "url": "#" },
+                    { "platform": "linkedin", "url": "#" },
+                    { "platform": "twitter", "url": "#" }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "name": "Ryan Mitchell",
+                  "role": "Chief Lead Technician",
+                  "image": "/team/t2.png",
+                  "socials": [
+                    { "platform": "facebook", "url": "#" },
+                    { "platform": "instagram", "url": "#" },
+                    { "platform": "linkedin", "url": "#" },
+                    { "platform": "twitter", "url": "#" }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "name": "James Carter",
+                  "role": "Hardware Repair Expert",
+                  "image": "/team/t3.png",
+                  "socials": [
+                    { "platform": "facebook", "url": "#" },
+                    { "platform": "instagram", "url": "#" },
+                    { "platform": "linkedin", "url": "#" },
+                    { "platform": "twitter", "url": "#" }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "name": "Daniel Roberts",
+                  "role": "Software Repair Engineer",
+                  "image": "/team/t4.png",
+                  "socials": [
+                    { "platform": "facebook", "url": "#" },
+                    { "platform": "instagram", "url": "#" },
+                    { "platform": "linkedin", "url": "#" },
+                    { "platform": "twitter", "url": "#" }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "name": "Alex Johnson",
+                  "role": "Mobile Repair Specialist",
+                  "image": "/team/t1.png",
+                  "socials": [
+                    { "platform": "facebook", "url": "#" },
+                    { "platform": "instagram", "url": "#" },
+                    { "platform": "linkedin", "url": "#" },
+                    { "platform": "twitter", "url": "#" }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "name": "Ryan Mitchell",
+                  "role": "Chief Lead Technician",
+                  "image": "/team/t2.png",
+                  "socials": [
+                    { "platform": "facebook", "url": "#" },
+                    { "platform": "instagram", "url": "#" },
+                    { "platform": "linkedin", "url": "#" },
+                    { "platform": "twitter", "url": "#" }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "name": "James Carter",
+                  "role": "Hardware Repair Expert",
+                  "image": "/team/t3.png",
+                  "socials": [
+                    { "platform": "facebook", "url": "#" },
+                    { "platform": "instagram", "url": "#" },
+                    { "platform": "linkedin", "url": "#" },
+                    { "platform": "twitter", "url": "#" }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "name": "Daniel Roberts",
+                  "role": "Software Repair Engineer",
+                  "image": "/team/t4.png",
+                  "socials": [
+                    { "platform": "facebook", "url": "#" },
+                    { "platform": "instagram", "url": "#" },
+                    { "platform": "linkedin", "url": "#" },
+                    { "platform": "twitter", "url": "#" }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "TeamDetail": {
+          "variants": {
+            "RepairTeamDetail": {
+              "name": "Rohit Sharma",
+              "role": "SENIOR TECHNICIAN",
+              "image": "/team/t1.png",
+              "description": "Rohit Sharma is a skilled mobile repair expert with over 6 years of experience in diagnosing and fixing a wide range of smartphone and tablet issues. He specializes in advanced chip-level repairs, screen replacements, and data recovery.",
+              "contact": {
+                "phone": "+91 98765 43210",
+                "email": "rohit@fixpoint.com",
+                "location": "New Delhi, India"
+              },
+              "stats": {
+                "experience": "6+ Years",
+                "specialization": "Smartphone Repair",
+                "completedRepairs": "5000+"
+              },
+              "socials": [
+                { "platform": "facebook", "url": "#" },
+                { "platform": "instagram", "url": "#" },
+                { "platform": "linkedin", "url": "#" }
+              ],
+              "about": {
+                "paragraphs": [
+                  "Rohit is passionate about solving complex hardware problems and staying up-to-date with the latest mobile technologies. His goal is to provide fast, reliable, and affordable repair solutions with 100% customer satisfaction.",
+                  "He has worked on thousands of devices across all major brands including Apple, Samsung, OnePlus, Xiaomi, Vivo, Oppo and more."
+                ],
+                "features": [
+                  "Trained & Certified Mobile Repair Technician",
+                  "Expert in Microscopic & Chip Level Soldering",
+                  "Focus on Quality & Customer Satisfaction",
+                  "Always Using Original & High Quality Parts"
+                ]
+              },
+              "education": [
+                {
+                  "title": "Mobile Repair Technician Course",
+                  "institute": "ABC Institute of Mobile Technology",
+                  "year": "2018"
+                },
+                {
+                  "title": "Advanced Chip Level Repairing",
+                  "institute": "TechFix Solutions",
+                  "year": "2019"
+                },
+                {
+                  "title": "Microscopic Soldering Certification",
+                  "institute": "Device Care Academy",
+                  "year": "2020"
+                }
+              ]
             }
           }
         },
@@ -318,7 +489,66 @@
                   "category": "Services",
                   "link": "/blog/professional-repair"
                 }
-              ]
+              ],
+              "viewAllButtonText": "View All Blogs",
+              "readMoreText": "Read More"
+            }
+          }
+        },
+        "Breadcrumb": {
+          "variants": {
+            "RepairBreadcrumb": {
+              "title": "About Us",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "About Us", "url": "/about" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbWhyChooseUs": {
+              "title": "Why Choose Us",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "Why Choose Us", "url": "/why-choose-us" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbOurTeams": {
+              "title": "Our Teams",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "Our Teams", "url": "/team" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            }
+          }
+        },
+        "WhyChooseUs": {
+          "variants": {
+            "RepairWhyChooseUs": {
+              "subtitle": "WHY CHOOSE US",
+              "title": "Trust The Experts With Your Mobile Repair Needs",
+              "features": [
+                { "text": "Expert Technicians" },
+                { "text": "Genuine Parts" },
+                { "text": "Quick Turnaround" },
+                { "text": "Quality Assurance" },
+                { "text": "Affordable Pricing" },
+                { "text": "Customer Satisfaction" }
+              ],
+              "progressBars": [
+                { "label": "Happy Customers", "percentage": 96 },
+                { "label": "Devices Repaired", "percentage": 98 },
+                { "label": "First Time Fix Rate", "percentage": 95 },
+                { "label": "On-Time Delivery", "percentage": 90 }
+              ],
+              "image": "/about/whychoose.png",
+              "videoLink": "#",
+              "overlayCard": {
+                "subtitle": "(Based On 5K+ Reviews)",
+                "title": "We Fix. You Relax.",
+                "description": "Fast, reliable and professional mobile repair solutions."
+              }
             }
           }
         }
@@ -334,6 +564,33 @@
                 { "key": "Stats", "component": "RepairStats" },
                 { "key": "Team", "component": "RepairTeam" },
                 { "key": "Blog", "component": "RepairBlog" }
+              ]
+            },
+            "about": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumb" },
+                { "key": "About", "component": "RepairAbout" },
+                { "key": "Stats", "component": "RepairStats" },
+                { "key": "WhyChooseUs", "component": "RepairWhyChooseUs" }
+              ]
+            },
+            "why-choose-us": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbWhyChooseUs" },
+                { "key": "WhyChooseUs", "component": "RepairWhyChooseUs" },
+                { "key": "Team", "component": "RepairTeam" }
+              ]
+            },
+            "team": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbOurTeams" },
+                { "key": "Team", "component": "RepairTeamPage" }
+              ]
+            },
+            "team-detail": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbTeamDetail" },
+                { "key": "TeamDetail", "component": "RepairTeamDetail" }
               ]
             }
           }

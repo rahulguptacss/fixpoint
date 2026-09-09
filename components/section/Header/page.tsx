@@ -38,17 +38,47 @@ export default function Header({ data }: { data: HeaderData }) {
             {/* Nav Links */}
             <nav className="hidden md:flex space-x-10 items-center">
               {data.menu.map((item, idx) => (
-                <Link 
-                  key={idx} 
-                  href={item.href}
-                  className={`text-[18px] font-semibold transition-colors ${
-                    item.label === 'Home' 
-                      ? 'text-[#1877F2]' 
-                      : 'text-[#021731] hover:text-[#1877F2]'
-                  }`}
-                >
-                  {item.label}
-                </Link>
+                item.subItems ? (
+                  <div key={idx} className="relative group">
+                    <button
+                      className={`flex items-center text-[18px] font-semibold transition-colors ${
+                        item.label === 'Home' 
+                          ? 'text-[#1877F2]' 
+                          : 'text-[#021731] group-hover:text-[#1877F2]'
+                      }`}
+                    >
+                      {item.label}
+                      <svg className="w-4 h-4 ml-1 mt-0.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div className="absolute left-0 mt-6 pt-2 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform translate-y-2 group-hover:translate-y-0">
+                      <div className="bg-white border border-gray-100 rounded-lg shadow-xl overflow-hidden">
+                        <div className="py-2">
+                          {item.subItems.map((sub, sIdx) => (
+                            <Link 
+                              key={sIdx} 
+                              href={sub.href}
+                              className="block px-5 py-2.5 text-[15px] font-medium text-gray-700 hover:bg-gray-50 hover:text-[#1877F2] transition-colors"
+                            >
+                              {sub.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <Link 
+                    key={idx} 
+                    href={item.href}
+                    className={`text-[18px] font-semibold transition-colors ${
+                      item.label === 'Home' 
+                        ? 'text-[#1877F2]' 
+                        : 'text-[#021731] hover:text-[#1877F2]'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )
               ))}
             </nav>
             
@@ -90,18 +120,39 @@ export default function Header({ data }: { data: HeaderData }) {
         >
           <div className="px-4 pt-2 pb-6 space-y-2 max-w-7xl mx-auto">
             {data.menu.map((item, idx) => (
-              <Link 
-                key={idx} 
-                href={item.href}
-                className={`block px-4 py-3 rounded-md text-base font-semibold transition-colors ${
-                  item.label === 'Home' 
-                    ? 'text-[#1877F2] bg-blue-50' 
-                    : 'text-[#021731] hover:text-[#1877F2] hover:bg-gray-50'
-                }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
+              item.subItems ? (
+                <div key={idx} className="space-y-1">
+                  <div className="px-4 py-3 text-base font-semibold text-[#021731] flex items-center justify-between">
+                    {item.label}
+                    <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                  </div>
+                  <div className="pl-6 space-y-1 bg-gray-50 rounded-lg py-2 mx-2">
+                    {item.subItems.map((sub, sIdx) => (
+                      <Link 
+                        key={sIdx} 
+                        href={sub.href}
+                        className="block px-4 py-2 rounded-md text-[15px] font-medium text-gray-600 hover:text-[#1877F2] hover:bg-white transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link 
+                  key={idx} 
+                  href={item.href}
+                  className={`block px-4 py-3 rounded-md text-base font-semibold transition-colors ${
+                    item.label === 'Home' 
+                      ? 'text-[#1877F2] bg-blue-50' 
+                      : 'text-[#021731] hover:text-[#1877F2] hover:bg-gray-50'
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
             <div className="pt-4 pb-2 px-2">
               <Link 
