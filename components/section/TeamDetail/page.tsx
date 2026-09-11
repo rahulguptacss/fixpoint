@@ -2,6 +2,7 @@ import React from 'react';
 import { TeamDetailData } from '../../types';
 import { User, Wrench, Award } from 'lucide-react';
 import { FaInstagram, FaCheckCircle, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export default function TeamDetail({ data }: { data: TeamDetailData }) {
   return (
@@ -95,11 +96,14 @@ export default function TeamDetail({ data }: { data: TeamDetailData }) {
                 let Icon = FaFacebookF;
                 if (social.platform === 'instagram') Icon = FaInstagram;
                 if (social.platform === 'linkedin') Icon = FaLinkedinIn;
+                if (social.platform === 'twitter') Icon = FaXTwitter;
                 
                 return (
                   <a 
                     key={idx} 
-                    href={social.url} 
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-[#F4F6FB] hover:bg-[#1140D0] text-[#1140D0] hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm"
                     aria-label={`Follow on ${social.platform}`}
                   >

@@ -1,6 +1,7 @@
 import React from 'react';
 import * as LucideIcons from 'lucide-react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { TeamData } from '../../types';
 import Link from 'next/link';
 
@@ -51,12 +52,14 @@ export default function Team({ data }: { data: TeamData }) {
                     if (social.platform === 'facebook') { IconComponent = FaFacebookF; isLucide = false; }
                     if (social.platform === 'instagram') { IconComponent = FaInstagram; isLucide = false; }
                     if (social.platform === 'linkedin') { IconComponent = FaLinkedinIn; isLucide = false; }
-                    if (social.platform === 'twitter') { IconComponent = FaTwitter; isLucide = false; }
+                    if (social.platform === 'twitter') { IconComponent = FaXTwitter; isLucide = false; }
                     
                     return (
                       <a 
                         key={idx} 
-                        href={social.url} 
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="bg-[#1877F2] text-white w-9 h-9 rounded-full flex items-center justify-center hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300"
                       >
                         <IconComponent className="w-4 h-4" {...(isLucide ? { strokeWidth: 2 } : {})} />

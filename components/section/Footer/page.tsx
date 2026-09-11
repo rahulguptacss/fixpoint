@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import * as LucideIcons from 'lucide-react';
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { FooterData } from '../../types';
 import MobileAccordion from '../../shared/MobileAccordion';
 
@@ -28,7 +29,7 @@ export default function Footer({ data }: { data: FooterData }) {
               {data.socialLinks.map((social, idx) => {
                 let IconComponent: React.ElementType = LucideIcons.Link;
                 if (social.platform === 'facebook') IconComponent = FaFacebook;
-                if (social.platform === 'twitter') IconComponent = FaTwitter;
+                if (social.platform === 'twitter') IconComponent = FaXTwitter;
                 if (social.platform === 'instagram') IconComponent = FaInstagram;
                 if (social.platform === 'youtube') IconComponent = FaYoutube;
 
@@ -36,6 +37,8 @@ export default function Footer({ data }: { data: FooterData }) {
                   <a
                     key={idx}
                     href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="border border-[#1e3450] text-white p-2.5 rounded-full hover:bg-[#1877F2] hover:border-[#1877F2] transition-all duration-300"
                   >
                     <IconComponent className="w-4 h-4" />

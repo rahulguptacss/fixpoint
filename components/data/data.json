@@ -51,10 +51,10 @@
         "timing": "Mon - Sat: 9:00 AM - 7:00 PM"
       },
       "socials": [
-        { "platform": "facebook", "url": "#" },
-        { "platform": "instagram", "url": "#" },
-        { "platform": "twitter", "url": "#" },
-        { "platform": "youtube", "url": "#" }
+        { "platform": "facebook", "url": "https://www.facebook.com/" },
+        { "platform": "instagram", "url": "https://www.instagram.com/" },
+        { "platform": "twitter", "url": "https://x.com/" },
+        { "platform": "youtube", "url": "https://www.youtube.com/" }
       ]
     },
     "Footer": {
@@ -83,10 +83,10 @@
         "workingHours": "Mon - Sat: 9:00 AM - 7:00 PM"
       },
       "socialLinks": [
-        { "platform": "facebook", "url": "#" },
-        { "platform": "twitter", "url": "#" },
-        { "platform": "instagram", "url": "#" },
-        { "platform": "youtube", "url": "#" }
+        { "platform": "facebook", "url": "https://www.facebook.com/" },
+        { "platform": "twitter", "url": "https://x.com/" },
+        { "platform": "instagram", "url": "https://www.instagram.com/" },
+        { "platform": "youtube", "url": "https://www.youtube.com/" }
       ],
       "newsletter": {
         "title": "Newsletter",
@@ -498,10 +498,10 @@
                   "role": "Mobile Repair Specialist",
                   "image": "/team/t1.png",
                   "socials": [
-                    { "platform": "facebook", "url": "#" },
-                    { "platform": "instagram", "url": "#" },
-                    { "platform": "linkedin", "url": "#" },
-                    { "platform": "twitter", "url": "#" }
+                    { "platform": "facebook", "url": "https://www.facebook.com/" },
+                    { "platform": "instagram", "url": "https://www.instagram.com/" },
+                    { "platform": "linkedin", "url": "https://www.linkedin.com/" },
+                    { "platform": "twitter", "url": "https://x.com/" }
                   ]
                 },
                 {
@@ -510,10 +510,10 @@
                   "role": "Chief Lead Technician",
                   "image": "/team/t2.png",
                   "socials": [
-                    { "platform": "facebook", "url": "#" },
-                    { "platform": "instagram", "url": "#" },
-                    { "platform": "linkedin", "url": "#" },
-                    { "platform": "twitter", "url": "#" }
+                    { "platform": "facebook", "url": "https://www.facebook.com/" },
+                    { "platform": "instagram", "url": "https://www.instagram.com/" },
+                    { "platform": "linkedin", "url": "https://www.linkedin.com/" },
+                    { "platform": "twitter", "url": "https://x.com/" }
                   ]
                 },
                 {
@@ -522,10 +522,10 @@
                   "role": "Hardware Repair Expert",
                   "image": "/team/t3.png",
                   "socials": [
-                    { "platform": "facebook", "url": "#" },
-                    { "platform": "instagram", "url": "#" },
-                    { "platform": "linkedin", "url": "#" },
-                    { "platform": "twitter", "url": "#" }
+                    { "platform": "facebook", "url": "https://www.facebook.com/" },
+                    { "platform": "instagram", "url": "https://www.instagram.com/" },
+                    { "platform": "linkedin", "url": "https://www.linkedin.com/" },
+                    { "platform": "twitter", "url": "https://x.com/" }
                   ]
                 },
                 {
@@ -534,10 +534,10 @@
                   "role": "Software Repair Engineer",
                   "image": "/team/t4.png",
                   "socials": [
-                    { "platform": "facebook", "url": "#" },
-                    { "platform": "instagram", "url": "#" },
-                    { "platform": "linkedin", "url": "#" },
-                    { "platform": "twitter", "url": "#" }
+                    { "platform": "facebook", "url": "https://www.facebook.com/" },
+                    { "platform": "instagram", "url": "https://www.instagram.com/" },
+                    { "platform": "linkedin", "url": "https://www.linkedin.com/" },
+                    { "platform": "twitter", "url": "https://x.com/" }
                   ]
                 }
               ]
@@ -553,10 +553,10 @@
                   "role": "Mobile Repair Specialist",
                   "image": "/team/t1.png",
                   "socials": [
-                    { "platform": "facebook", "url": "#" },
-                    { "platform": "instagram", "url": "#" },
-                    { "platform": "linkedin", "url": "#" },
-                    { "platform": "twitter", "url": "#" }
+                    { "platform": "facebook", "url": "https://www.facebook.com/" },
+                    { "platform": "instagram", "url": "https://www.instagram.com/" },
+                    { "platform": "linkedin", "url": "https://www.linkedin.com/" },
+                    { "platform": "twitter", "url": "https://x.com/" }
                   ]
                 },
                 {
@@ -565,10 +565,10 @@
                   "role": "Chief Lead Technician",
                   "image": "/team/t2.png",
                   "socials": [
-                    { "platform": "facebook", "url": "#" },
-                    { "platform": "instagram", "url": "#" },
-                    { "platform": "linkedin", "url": "#" },
-                    { "platform": "twitter", "url": "#" }
+                    { "platform": "facebook", "url": "https://www.facebook.com/" },
+                    { "platform": "instagram", "url": "https://www.instagram.com/" },
+                    { "platform": "linkedin", "url": "https://www.linkedin.com/" },
+                    { "platform": "twitter", "url": "https://x.com/" }
                   ]
                 },
                 {
@@ -577,10 +577,10 @@
                   "role": "Hardware Repair Expert",
                   "image": "/team/t3.png",
                   "socials": [
-                    { "platform": "facebook", "url": "#" },
-                    { "platform": "instagram", "url": "#" },
-                    { "platform": "linkedin", "url": "#" },
-                    { "platform": "twitter", "url": "#" }
+                    { "platform": "facebook", "url": "https://www.facebook.com/" },
+                    { "platform": "instagram", "url": "https://www.instagram.com/" },
+                    { "platform": "linkedin", "url": "https://www.linkedin.com/" },
+                    { "platform": "twitter", "url": "https://x.com/" }
                   ]
                 },
                 {
@@ -589,10 +589,10 @@
                   "role": "Software Repair Engineer",
                   "image": "/team/t4.png",
                   "socials": [
-                    { "platform": "facebook", "url": "#" },
-                    { "platform": "instagram", "url": "#" },
-                    { "platform": "linkedin", "url": "#" },
-                    { "platform": "twitter", "url": "#" }
+                    { "platform": "facebook", "url": "https://www.facebook.com/" },
+                    { "platform": "instagram", "url": "https://www.instagram.com/" },
+                    { "platform": "linkedin", "url": "https://www.linkedin.com/" },
+                    { "platform": "twitter", "url": "https://x.com/" }
                   ]
                 },
                 {
@@ -601,10 +601,10 @@
                   "role": "Mobile Repair Specialist",
                   "image": "/team/t1.png",
                   "socials": [
-                    { "platform": "facebook", "url": "#" },
-                    { "platform": "instagram", "url": "#" },
-                    { "platform": "linkedin", "url": "#" },
-                    { "platform": "twitter", "url": "#" }
+                    { "platform": "facebook", "url": "https://www.facebook.com/" },
+                    { "platform": "instagram", "url": "https://www.instagram.com/" },
+                    { "platform": "linkedin", "url": "https://www.linkedin.com/" },
+                    { "platform": "twitter", "url": "https://x.com/" }
                   ]
                 },
                 {
@@ -613,10 +613,10 @@
                   "role": "Chief Lead Technician",
                   "image": "/team/t2.png",
                   "socials": [
-                    { "platform": "facebook", "url": "#" },
-                    { "platform": "instagram", "url": "#" },
-                    { "platform": "linkedin", "url": "#" },
-                    { "platform": "twitter", "url": "#" }
+                    { "platform": "facebook", "url": "https://www.facebook.com/" },
+                    { "platform": "instagram", "url": "https://www.instagram.com/" },
+                    { "platform": "linkedin", "url": "https://www.linkedin.com/" },
+                    { "platform": "twitter", "url": "https://x.com/" }
                   ]
                 },
                 {
@@ -625,10 +625,10 @@
                   "role": "Hardware Repair Expert",
                   "image": "/team/t3.png",
                   "socials": [
-                    { "platform": "facebook", "url": "#" },
-                    { "platform": "instagram", "url": "#" },
-                    { "platform": "linkedin", "url": "#" },
-                    { "platform": "twitter", "url": "#" }
+                    { "platform": "facebook", "url": "https://www.facebook.com/" },
+                    { "platform": "instagram", "url": "https://www.instagram.com/" },
+                    { "platform": "linkedin", "url": "https://www.linkedin.com/" },
+                    { "platform": "twitter", "url": "https://x.com/" }
                   ]
                 },
                 {
@@ -637,10 +637,10 @@
                   "role": "Software Repair Engineer",
                   "image": "/team/t4.png",
                   "socials": [
-                    { "platform": "facebook", "url": "#" },
-                    { "platform": "instagram", "url": "#" },
-                    { "platform": "linkedin", "url": "#" },
-                    { "platform": "twitter", "url": "#" }
+                    { "platform": "facebook", "url": "https://www.facebook.com/" },
+                    { "platform": "instagram", "url": "https://www.instagram.com/" },
+                    { "platform": "linkedin", "url": "https://www.linkedin.com/" },
+                    { "platform": "twitter", "url": "https://x.com/" }
                   ]
                 }
               ]
@@ -665,9 +665,10 @@
                 "completedRepairs": "5000+"
               },
               "socials": [
-                { "platform": "facebook", "url": "#" },
-                { "platform": "instagram", "url": "#" },
-                { "platform": "linkedin", "url": "#" }
+                { "platform": "facebook", "url": "https://www.facebook.com/" },
+                { "platform": "instagram", "url": "https://www.instagram.com/" },
+                { "platform": "linkedin", "url": "https://www.linkedin.com/" },
+                { "platform": "twitter", "url": "https://x.com/" }
               ],
               "about": {
                 "paragraphs": [
