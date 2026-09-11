@@ -67,6 +67,7 @@ export interface ServiceItem {
   description: string;
   icon: string;
   image: string;
+  slug?: string;
 }
 
 export interface ServicesData {
@@ -188,6 +189,40 @@ export interface BlogData {
   items: BlogItem[];
   viewAllButtonText?: string;
   readMoreText?: string;
+  hideViewAll?: boolean;
+}
+
+export interface BlogDetailPost {
+  slug: string;
+  category: string;
+  title: string;
+  excerpt: string;
+  author: string;
+  date: string;
+  readTime: string;
+  heroImage: string;
+  intro: string;
+  signs: { title: string; image: string; text: string; bullet: string }[];
+}
+
+export interface BlogDetailData {
+  posts: BlogDetailPost[];
+  sidebar: {
+    aboutTitle: string;
+    aboutText: string;
+    aboutButtonLabel: string;
+    aboutButtonLink: string;
+    recentTitle: string;
+    recentPosts?: { title: string; date: string; image: string; href: string }[];
+    categoriesTitle: string;
+    categories: { label: string; href: string }[];
+    helpTitle: string;
+    helpText: string;
+    helpPhone: string;
+    helpEmail: string;
+    helpButtonLabel: string;
+    helpButtonLink: string;
+  };
 }
 
 export interface FooterQuickLink {
@@ -299,28 +334,360 @@ export interface BrandsWeRepairData {
   };
 }
 
+export interface ServiceDetailItem {
+  slug: string;
+  title: string;
+  icon: string;
+  heroImage: string;
+  description: string;
+  body: string;
+  features: string[];
+  gallery: string[];
+  highlights: {
+    title: string;
+    description: string;
+    icon: string;
+  }[];
+}
+
+export interface ServiceDetailData {
+  sidebar: {
+    services: {
+      title: string;
+      items: SidebarServiceItem[];
+    };
+    getStarted: {
+      title: string;
+      description: string;
+      phone: string;
+      email: string;
+      address: string;
+      buttonText: string;
+      buttonLink: string;
+    };
+    downloads: {
+      title: string;
+      items: SidebarDownloadItem[];
+    };
+  };
+  items: ServiceDetailItem[];
+}
+
+export interface TestimonialsData {
+  subtitle: string;
+  titlePart1: string;
+  titleHighlight: string;
+  description: string;
+  verifiedLabel: string;
+  items: {
+    name: string;
+    city: string;
+    avatar: string;
+    title: string;
+    quote: string;
+    rating: number;
+  }[];
+  cta?: {
+    title: string;
+    description: string;
+    buttonLabel: string;
+    buttonLink: string;
+  };
+  stats?: {
+    background: string;
+    items: { value: string; label: string }[];
+  };
+  team?: {
+    subtitle: string;
+    title: string;
+    description: string;
+    members: { name: string; role: string; image: string }[];
+  };
+}
+
+export interface FaqData {
+  subtitle: string;
+  titlePart1: string;
+  titleHighlight: string;
+  description: string;
+  groups: {
+    id: string;
+    icon: string;
+    title: string;
+    items: { question: string; answer: string }[];
+  }[];
+}
+
+export interface GalleryData {
+  titlePart1: string;
+  titleHighlight: string;
+  description: string;
+  tabs: { id: "photo" | "video"; label: string; icon: string }[];
+  filters: { id: string; label: string }[];
+  photos: { src: string; alt: string; category: string }[];
+  videos: { src: string; alt: string; category: string; videoUrl: string }[];
+  cta: {
+    title: string;
+    description: string;
+    phone: string;
+    buttonLabel: string;
+    buttonLink: string;
+  };
+}
+
+export interface PricingData {
+  subtitle: string;
+  titlePart1: string;
+  titleHighlight: string;
+  description: string;
+  highlights: { icon: string; title: string; description: string }[];
+  table: {
+    headers: { service: string; description: string; price: string };
+    rows: {
+      icon: string;
+      iconBg: string;
+      iconColor: string;
+      title: string;
+      description: string;
+      price: string;
+    }[];
+  };
+  popular: {
+    title: string;
+    items: { icon: string; title: string; price: string; duration: string; image: string }[];
+  };
+}
+
+export interface BookRepairData {
+  intro: {
+    subtitle: string;
+    titlePart1: string;
+    titleHighlight: string;
+    description: string;
+    image: string;
+    features: { icon: string; title: string; description: string }[];
+  };
+  form: {
+    title: string;
+    icon: string;
+    submitLabel: string;
+    privacyNote: string;
+    pickupNote: {
+      title: string;
+      description: string;
+    };
+    fields: {
+      fullName: string;
+      phone: string;
+      email: string;
+      deviceType: string;
+      brand: string;
+      model: string;
+      issueType: string;
+      issueDetails: string;
+      preferredDate: string;
+      preferredTime: string;
+    };
+    options: {
+      deviceTypes: string[];
+      brands: string[];
+      models: string[];
+      issueTypes: string[];
+      times: string[];
+    };
+  };
+  process: {
+    subtitle: string;
+    title: string;
+    steps: { number: string; icon: string; title: string; description: string }[];
+  };
+}
+
+export interface CareerData {
+  whyJoin: {
+    subtitle: string;
+    titlePart1: string;
+    titleHighlight: string;
+    description: string;
+    cards: { icon: string; title: string; description: string }[];
+  };
+  openings: {
+    subtitle: string;
+    titlePart1: string;
+    titleHighlight: string;
+    description: string;
+    buttonLabel: string;
+    buttonLink: string;
+    applyLabel: string;
+    jobs: {
+      icon: string;
+      title: string;
+      description: string;
+      location: string;
+      type: string;
+      applyLink: string;
+    }[];
+  };
+}
+
+export interface CareerDetailJob {
+  slug: string;
+  subtitle: string;
+  title: string;
+  intro: string;
+  location: string;
+  type: string;
+  posted: string;
+  facts: { icon: string; label: string; value: string }[];
+  overviewTitle: string;
+  overview: string;
+  responsibilitiesTitle: string;
+  responsibilities: string[];
+  requirementsTitle: string;
+  requirements: string[];
+  offerTitle: string;
+  offer: { icon: string; title: string }[];
+  cta: {
+    title: string;
+    description: string;
+    buttonLabel: string;
+    buttonLink: string;
+  };
+}
+
+export interface CareerDetailData {
+  form: {
+    title: string;
+    fullName: string;
+    email: string;
+    phone: string;
+    experience: string;
+    experiencePlaceholder: string;
+    experienceOptions: string[];
+    location: string;
+    resume: string;
+    resumeHint: string;
+    coverLetter: string;
+    coverPlaceholder: string;
+    submitLabel: string;
+    privacyNote: string;
+  };
+  whyJoin: {
+    title: string;
+    items: { icon: string; text: string }[];
+    image: string;
+  };
+  jobs: CareerDetailJob[];
+}
+
+export interface PolicyPageData {
+  slug: string;
+  breadcrumbTitle: string;
+  titlePart1: string;
+  titleHighlight: string;
+  intro: string;
+  sections: { title: string; text: string }[];
+}
+
+export interface PolicyData {
+  bgImage: string;
+  pages: PolicyPageData[];
+}
+
+export interface SitemapLink {
+  label: string;
+  href: string;
+}
+
+export interface SitemapGroup {
+  number: string;
+  title: string;
+  icon: string;
+  links: SitemapLink[];
+}
+
+export interface SitemapData {
+  logo: string;
+  tagline: string;
+  groups: SitemapGroup[];
+  others: SitemapGroup[];
+}
+
+export interface ContactData {
+  subtitle: string;
+  titlePart1: string;
+  titleHighlight: string;
+  description: string;
+  info: { icon: string; title: string; lines: string[] }[];
+  form: {
+    title: string;
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    service: string;
+    servicePlaceholder: string;
+    services: string[];
+    message: string;
+    submitLabel: string;
+    privacyNote: string;
+  };
+  map: {
+    embedUrl: string;
+    cardTitle: string;
+    cardAddress: string;
+    mapsLabel: string;
+    mapsUrl: string;
+  };
+}
+
 export interface PageComponent {
   key: string;
   component: string;
+}
+
+export interface NotFoundData {
+  code: string;
+  titlePart1: string;
+  titlePart2: string;
+  description: string;
+  homeLabel: string;
+  homeLink: string;
+  bookLabel: string;
+  bookLink: string;
+  image: string;
 }
 
 export interface RepairTemplateData {
   common: {
     Header: HeaderData;
     Footer: FooterData;
+    NotFound?: NotFoundData;
   };
   categories: {
     Repair: {
       sections: {
         Hero: { variants: { RepairHero: HeroData } };
         About: { variants: { RepairAbout: AboutData } };
-        Services: { variants: { RepairServices: ServicesData } };
+        Services: { variants: { RepairServices: ServicesData; RepairServicesPage?: ServicesData } };
+        ServiceDetail: { variants: { RepairServiceDetail: ServiceDetailData } };
         Stats: { variants: { RepairStats: StatsData } };
         Team: { variants: { RepairTeam: TeamData; RepairTeamPage?: TeamData; } };
         TeamDetail: { variants: { RepairTeamDetail: TeamDetailData } };
         BrandsWeRepair: { variants: { RepairBrandsWeRepair: BrandsWeRepairData } };
-        Blog: { variants: { RepairBlog: BlogData } };
-        Breadcrumb: { variants: { RepairBreadcrumb: BreadcrumbData; RepairBreadcrumbWhyChooseUs?: BreadcrumbData; RepairBreadcrumbOurTeams?: BreadcrumbData; RepairBreadcrumbTeamDetail?: BreadcrumbData; RepairBreadcrumbBrandsWeRepair?: BreadcrumbData; } };
+        Blog: { variants: { RepairBlog: BlogData; RepairBlogPage?: BlogData } };
+        BlogDetail: { variants: { RepairBlogDetail: BlogDetailData } };
+        BookRepair: { variants: { RepairBookRepair: BookRepairData } };
+        Pricing: { variants: { RepairPricing: PricingData } };
+        Gallery: { variants: { RepairGallery: GalleryData } };
+        Testimonials: { variants: { RepairTestimonials: TestimonialsData } };
+        Faq: { variants: { RepairFaq: FaqData } };
+        Contact: { variants: { RepairContact: ContactData } };
+        Career: { variants: { RepairCareer: CareerData } };
+        CareerDetail: { variants: { RepairCareerDetail: CareerDetailData } };
+        Policy: { variants: { RepairPolicy: PolicyData } };
+        Sitemap: { variants: { RepairSitemap: SitemapData } };
+        Breadcrumb: { variants: { RepairBreadcrumb: BreadcrumbData; RepairBreadcrumbWhyChooseUs?: BreadcrumbData; RepairBreadcrumbOurTeams?: BreadcrumbData; RepairBreadcrumbTeamDetail?: BreadcrumbData; RepairBreadcrumbBrandsWeRepair?: BreadcrumbData; RepairBreadcrumbServices?: BreadcrumbData; RepairBreadcrumbServiceDetail?: BreadcrumbData; RepairBreadcrumbBook?: BreadcrumbData; RepairBreadcrumbPricing?: BreadcrumbData; RepairBreadcrumbGallery?: BreadcrumbData; RepairBreadcrumbTestimonials?: BreadcrumbData; RepairBreadcrumbFaq?: BreadcrumbData; RepairBreadcrumbBlog?: BreadcrumbData; RepairBreadcrumbBlogDetail?: BreadcrumbData; RepairBreadcrumbContact?: BreadcrumbData; RepairBreadcrumbCareer?: BreadcrumbData; RepairBreadcrumbCareerDetail?: BreadcrumbData; } };
         WhyChooseUs: { variants: { RepairWhyChooseUs: WhyChooseUsData } };
       };
       templateComponents: {

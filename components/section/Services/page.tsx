@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import * as LucideIcons from 'lucide-react';
 import { ServicesData } from '../../types';
 
@@ -69,14 +70,15 @@ export default function Services({ data }: { data: ServicesData }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5 lg:gap-6">
           {data.items.map((item, index) => {
             const IconComponent = (LucideIcons as any)[item.icon] || LucideIcons.Wrench;
-            const isYellow = item.id === 2;
+            const isYellow = item.id === 2 || item.id === 4;
             const borderColor = isYellow ? 'border-[#FFB800]' : 'border-[#0056D2]';
             const bgColor = isYellow ? 'bg-[#FFB800]' : 'bg-[#0056D2]';
             
             return (
-              <div 
-                key={item.id} 
-                className={`bg-white rounded-[32px] overflow-visible shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_16px_40px_rgb(0,0,0,0.14)] transition-all duration-500 group transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+              <Link
+                href={`/services/${item.slug || item.id}`}
+                key={item.id}
+                className={`block bg-white rounded-[32px] overflow-visible shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_16px_40px_rgb(0,0,0,0.14)] transition-all duration-500 group transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 {/* Image Section */}
@@ -106,7 +108,7 @@ export default function Services({ data }: { data: ServicesData }) {
                     {item.description}
                   </p>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

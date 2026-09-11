@@ -10,13 +10,34 @@
           "href": "/about",
           "subItems": [
             { "label": "About Us", "href": "/about" },
-            { "label": "Why Choose Us", "href": "/why-choose-us" }
+            { "label": "Why Choose Us", "href": "/why-choose-us" },
+            { "label": "Brands We Repair", "href": "/brands-we-repair" }
           ]
         },
         { "label": "Services", "href": "/services" },
         { "label": "Team", "href": "/team" },
         { "label": "Blog", "href": "/blog" },
-        { "label": "Career", "href": "/career" },
+        {
+          "label": "Pages",
+          "href": "/pricing",
+          "subItems": [
+            { "label": "Pricing", "href": "/pricing" },
+            { "label": "Gallery", "href": "/gallery" },
+            { "label": "Testimonials", "href": "/testimonials" },
+            {
+              "label": "Policies",
+              "href": "/privacy",
+              "subItems": [
+                { "label": "Privacy Policy", "href": "/privacy" },
+                { "label": "Terms & Conditions", "href": "/terms" },
+                { "label": "Refund Policy", "href": "/refund-policy" },
+                { "label": "Warranty Policy", "href": "/warranty-policy" }
+              ]
+            },
+            { "label": "FAQ", "href": "/faq" },
+            { "label": "Career", "href": "/career" }
+          ]
+        },
         { "label": "Contact", "href": "/contact" }
       ],
       "button": {
@@ -45,6 +66,7 @@
         { "label": "About Us", "href": "/about" },
         { "label": "Services", "href": "/services" },
         { "label": "Blog", "href": "/blog" },
+        { "label": "FAQ", "href": "/faq" },
         { "label": "Contact Us", "href": "/contact" }
       ],
       "servicesLinks": [
@@ -101,6 +123,17 @@
         "subscribeBtn": "Subscribe",
         "newsletterPlaceholder": "Enter your email"
       }
+    },
+    "NotFound": {
+      "code": "404",
+      "titlePart1": "Oops!",
+      "titlePart2": "Page Not Found",
+      "description": "The page you're looking for seems to have gone missing or is under repair.",
+      "homeLabel": "Back to Home",
+      "homeLink": "/",
+      "bookLabel": "Book a Repair",
+      "bookLink": "/book",
+      "image": "/gallery/screen-2.jpg"
     }
   },
   "categories": {
@@ -187,21 +220,234 @@
                   "title": "Screen Repair",
                   "description": "Fast and reliable screen replacement with high quality parts, returned to look brand new.",
                   "icon": "Smartphone",
-                  "image": "/services/s1.png"
+                  "image": "/services/s1.png",
+                  "slug": "screen-repair"
                 },
                 {
                   "id": 2,
                   "title": "Battery Replacement",
                   "description": "Professional battery replacements to keep the power running in your device.",
                   "icon": "Battery",
-                  "image": "/services/s2.png"
+                  "image": "/services/s2.png",
+                  "slug": "battery-replacement"
                 },
                 {
                   "id": 3,
                   "title": "Software Repair",
                   "description": "Expert software diagnostics and troubleshooting to ensure your device is performing optimally.",
                   "icon": "Cpu",
-                  "image": "/services/s3.png"
+                  "image": "/services/s3.png",
+                  "slug": "software-repair"
+                }
+              ]
+            },
+            "RepairServicesPage": {
+              "subtitle": "OUR SERVICE",
+              "titlePart1": "Keeping Your ",
+              "titleHighlight": "Device Running",
+              "titlePart2": "With ",
+              "titleHighlight2": "Smoothly",
+              "titlePart3": "",
+              "items": [
+                {
+                  "id": 1,
+                  "title": "Screen Repair",
+                  "description": "Cracked or broken screen? We replace it with high-quality parts to make it look and work like new.",
+                  "icon": "Smartphone",
+                  "image": "/services/sp1.png",
+                  "slug": "screen-repair"
+                },
+                {
+                  "id": 2,
+                  "title": "Battery Replacement",
+                  "description": "Fast battery drain? We use original batteries to boost performance and extend your device life.",
+                  "icon": "Battery",
+                  "image": "/services/sp2.png",
+                  "slug": "battery-replacement"
+                },
+                {
+                  "id": 3,
+                  "title": "Software Repair",
+                  "description": "Facing software issues? We fix system errors, freezes, and more to keep your device running smoothly.",
+                  "icon": "Cpu",
+                  "image": "/services/sp3.png",
+                  "slug": "software-repair"
+                },
+                {
+                  "id": 4,
+                  "title": "Water Damage Repair",
+                  "description": "Dropped your phone in water? We clean and restore your device to save it from further damage.",
+                  "icon": "Droplets",
+                  "image": "/services/sp4.png",
+                  "slug": "water-damage-repair"
+                },
+                {
+                  "id": 5,
+                  "title": "Charging Port Repair",
+                  "description": "Charging issues? We repair or replace damaged charging ports for quick and reliable charging.",
+                  "icon": "Plug",
+                  "image": "/services/sp5.png",
+                  "slug": "charging-port-repair"
+                },
+                {
+                  "id": 6,
+                  "title": "Camera Repair",
+                  "description": "Blurry photos or camera not working? We fix front and back camera issues for clear and sharp results.",
+                  "icon": "Camera",
+                  "image": "/services/sp6.png",
+                  "slug": "camera-repair"
+                }
+              ]
+            }
+          }
+        },
+        "ServiceDetail": {
+          "variants": {
+            "RepairServiceDetail": {
+              "sidebar": {
+                "services": {
+                  "title": "Our Services",
+                  "items": [
+                    { "title": "Screen Repair", "icon": "Smartphone", "link": "/services/screen-repair" },
+                    { "title": "Battery Replacement", "icon": "Battery", "link": "/services/battery-replacement" },
+                    { "title": "Charging Port Repair", "icon": "Plug", "link": "/services/charging-port-repair" },
+                    { "title": "Camera Repair", "icon": "Camera", "link": "/services/camera-repair" },
+                    { "title": "Water Damage Repair", "icon": "Droplets", "link": "/services/water-damage-repair" },
+                    { "title": "Software Repair", "icon": "Settings", "link": "/services/software-repair" }
+                  ]
+                },
+                "getStarted": {
+                  "title": "Get Started Today",
+                  "description": "We're here to fix your device quickly and get you back to what matters.",
+                  "phone": "+91 98765 43210",
+                  "email": "support@fixpoint.com",
+                  "address": "123 Tech Street, Sector 22, Gurgaon, Haryana 122022",
+                  "buttonText": "Get In Touch",
+                  "buttonLink": "/contact"
+                },
+                "downloads": {
+                  "title": "Download",
+                  "items": [
+                    { "title": "Service Brochure", "icon": "FileText", "link": "/repair/download/service-brochure.pdf" },
+                    { "title": "Price List", "icon": "FileText", "link": "/repair/download/price-list.pdf" },
+                    { "title": "Warranty Policy", "icon": "FileText", "link": "/repair/download/warranty-policy.pdf" }
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "slug": "screen-repair",
+                  "title": "Screen Repair",
+                  "icon": "Smartphone",
+                  "heroImage": "/services/sp1.png",
+                  "description": "Cracked or broken screen? We provide professional screen repair services using high-quality parts to restore your phone's original display clarity and touch performance.",
+                  "body": "Our skilled technicians carefully replace damaged screens with precision and care. Whether it's a minor crack or a completely shattered display, we ensure your device looks and works like new.",
+                  "features": [
+                    "Original quality screens with perfect fit",
+                    "Fast turnaround time — most repairs in 30–60 minutes",
+                    "Safe repair process — your data is 100% secure",
+                    "90 days warranty on screen replacement"
+                  ],
+                  "gallery": ["/services/sp2.png", "/services/sp3.png"],
+                  "highlights": [
+                    { "title": "Certified Technicians", "description": "Our experts have years of experience in handling all types of mobile phones with care and precision.", "icon": "ShieldCheck" },
+                    { "title": "Genuine Parts", "description": "We use only high-quality and tested parts to ensure long-lasting performance and customer satisfaction.", "icon": "BadgeCheck" }
+                  ]
+                },
+                {
+                  "slug": "battery-replacement",
+                  "title": "Battery Replacement",
+                  "icon": "Battery",
+                  "heroImage": "/services/sp2.png",
+                  "description": "Fast battery drain? We replace worn-out batteries with original-quality cells so your phone lasts longer and charges safely.",
+                  "body": "Our technicians diagnose battery health and install a replacement that fits your device perfectly, restoring performance without compromising safety.",
+                  "features": [
+                    "Original quality batteries with proper calibration",
+                    "Most replacements completed in under an hour",
+                    "Safe handling of swollen or damaged batteries",
+                    "90 days warranty on battery replacement"
+                  ],
+                  "gallery": ["/services/sp1.png", "/services/sp5.png"],
+                  "highlights": [
+                    { "title": "Certified Technicians", "description": "Our experts have years of experience in handling all types of mobile phones with care and precision.", "icon": "ShieldCheck" },
+                    { "title": "Genuine Parts", "description": "We use only high-quality and tested parts to ensure long-lasting performance and customer satisfaction.", "icon": "BadgeCheck" }
+                  ]
+                },
+                {
+                  "slug": "charging-port-repair",
+                  "title": "Charging Port Repair",
+                  "icon": "Plug",
+                  "heroImage": "/services/sp5.png",
+                  "description": "Charging issues? We repair or replace damaged charging ports for quick and reliable charging.",
+                  "body": "Loose cables, debris, or a worn port can stop your phone from charging. We clean, repair, or replace the port so power delivery is stable again.",
+                  "features": [
+                    "Micro-soldering and port replacement when needed",
+                    "Quick diagnosis of charge and data issues",
+                    "Dust and corrosion cleaning included",
+                    "90 days warranty on charging port repair"
+                  ],
+                  "gallery": ["/services/sp3.png", "/services/sp6.png"],
+                  "highlights": [
+                    { "title": "Certified Technicians", "description": "Our experts have years of experience in handling all types of mobile phones with care and precision.", "icon": "ShieldCheck" },
+                    { "title": "Genuine Parts", "description": "We use only high-quality and tested parts to ensure long-lasting performance and customer satisfaction.", "icon": "BadgeCheck" }
+                  ]
+                },
+                {
+                  "slug": "camera-repair",
+                  "title": "Camera Repair",
+                  "icon": "Camera",
+                  "heroImage": "/services/sp6.png",
+                  "description": "Blurry photos or camera not working? We fix front and back camera issues for clear and sharp results.",
+                  "body": "From cracked camera glass to focus failures, we restore front and rear cameras so your photos and videos look sharp again.",
+                  "features": [
+                    "Front and rear camera module replacement",
+                    "Lens glass and focus motor repair",
+                    "Alignment and testing after repair",
+                    "90 days warranty on camera repair"
+                  ],
+                  "gallery": ["/services/sp1.png", "/services/sp4.png"],
+                  "highlights": [
+                    { "title": "Certified Technicians", "description": "Our experts have years of experience in handling all types of mobile phones with care and precision.", "icon": "ShieldCheck" },
+                    { "title": "Genuine Parts", "description": "We use only high-quality and tested parts to ensure long-lasting performance and customer satisfaction.", "icon": "BadgeCheck" }
+                  ]
+                },
+                {
+                  "slug": "water-damage-repair",
+                  "title": "Water Damage Repair",
+                  "icon": "Droplets",
+                  "heroImage": "/services/sp4.png",
+                  "description": "Dropped your phone in water? We clean and restore your device to save it from further damage.",
+                  "body": "We open the device, remove corrosion, and treat affected boards as quickly as possible to improve the chance of a full recovery.",
+                  "features": [
+                    "Ultrasonic cleaning and corrosion treatment",
+                    "Board-level inspection and repair",
+                    "Data-priority handling whenever possible",
+                    "Honest assessment of recovery chances"
+                  ],
+                  "gallery": ["/services/sp2.png", "/services/sp5.png"],
+                  "highlights": [
+                    { "title": "Certified Technicians", "description": "Our experts have years of experience in handling all types of mobile phones with care and precision.", "icon": "ShieldCheck" },
+                    { "title": "Genuine Parts", "description": "We use only high-quality and tested parts to ensure long-lasting performance and customer satisfaction.", "icon": "BadgeCheck" }
+                  ]
+                },
+                {
+                  "slug": "software-repair",
+                  "title": "Software Repair",
+                  "icon": "Settings",
+                  "heroImage": "/services/sp3.png",
+                  "description": "Facing software issues? We fix system errors, freezes, and more to keep your device running smoothly.",
+                  "body": "We diagnose OS crashes, boot loops, and app issues, then restore a stable software setup while protecting your data wherever possible.",
+                  "features": [
+                    "OS update, flash, and factory recovery",
+                    "Boot loop and freeze troubleshooting",
+                    "Data backup assistance when possible",
+                    "Malware and performance cleanup"
+                  ],
+                  "gallery": ["/services/sp6.png", "/services/sp1.png"],
+                  "highlights": [
+                    { "title": "Certified Technicians", "description": "Our experts have years of experience in handling all types of mobile phones with care and precision.", "icon": "ShieldCheck" },
+                    { "title": "Genuine Parts", "description": "We use only high-quality and tested parts to ensure long-lasting performance and customer satisfaction.", "icon": "BadgeCheck" }
+                  ]
                 }
               ]
             }
@@ -455,6 +701,104 @@
             }
           }
         },
+        "BrandsWeRepair": {
+          "variants": {
+            "RepairBrandsWeRepair": {
+              "sidebar": {
+                "services": {
+                  "title": "Our Services",
+                  "items": [
+                    { "title": "Screen Repair", "icon": "Smartphone", "link": "/services" },
+                    { "title": "Battery Replacement", "icon": "Battery", "link": "/services" },
+                    { "title": "Charging Port Repair", "icon": "Plug", "link": "/services" },
+                    { "title": "Camera Repair", "icon": "Camera", "link": "/services" },
+                    { "title": "Water Damage Repair", "icon": "Droplets", "link": "/services" },
+                    { "title": "Software Repair", "icon": "Settings", "link": "/services" }
+                  ]
+                },
+                "getInTouch": {
+                  "title": "Get In Touch",
+                  "description": "We're here to help! Reach out for any repair enquiries or support.",
+                  "phone": "+91 98765 43210",
+                  "email": "support@fixpoint.com",
+                  "address": "123 Tech Street, Sector 22, Gurgaon, Haryana 122022",
+                  "buttonText": "Get In Touch",
+                  "buttonLink": "/contact"
+                },
+                "whyChoose": {
+                  "title": "Why Choose Fixaro",
+                  "features": [
+                    "Genuine Parts & Accessories",
+                    "Skilled & Certified Technicians",
+                    "Quick Turnaround Time",
+                    "Affordable & Transparent Pricing",
+                    "90 Days Warranty on Repairs"
+                  ]
+                },
+                "downloads": {
+                  "title": "Download",
+                  "items": [
+                    { "title": "Service Brochure", "icon": "FileText", "link": "/repair/download/service-brochure.pdf" },
+                    { "title": "Price List", "icon": "FileText", "link": "/repair/download/price-list.pdf" },
+                    { "title": "Warranty Policy", "icon": "FileText", "link": "/repair/download/warranty-policy.pdf" }
+                  ]
+                }
+              },
+              "mainContent": {
+                "hero": {
+                  "titlePart1": "Brands We",
+                  "titleHighlight": "Repair",
+                  "description": "No matter what brand you use, our experts have the skills and experience to fix it.",
+                  "image": "/repair/bannercover.png"
+                },
+                "brandsSection": {
+                  "title": "All Major Brands, Expertly Repaired",
+                  "description": "We repair smartphones, tablets and devices from all leading brands. Whether it's a cracked screen, battery issue, or any other problem — we've got you covered.",
+                  "brands": [
+                    { "name": "Apple", "logo": "/repair/logo/apple.png" },
+                    { "name": "Samsung", "logo": "/repair/logo/samsung.png" },
+                    { "name": "OnePlus", "logo": "/repair/logo/OnePlus.png" },
+                    { "name": "Xiaomi", "logo": "/repair/logo/Xiaomi.png" },
+                    { "name": "Vivo", "logo": "/repair/logo/vivo.png" },
+                    { "name": "Oppo", "logo": "/repair/logo/oppo.png" },
+                    { "name": "Realme", "logo": "/repair/logo/Realme.png" },
+                    { "name": "Poco", "logo": "/repair/logo/poco.png" },
+                    { "name": "Google", "logo": "/repair/logo/google.png" },
+                    { "name": "Motorola", "logo": "/repair/logo/Motorola.png" },
+                    { "name": "Nokia", "logo": "/repair/logo/nokia.png" },
+                    { "name": "Infinix", "logo": "/repair/logo/infinix.png" },
+                    { "name": "Tecno", "logo": "/repair/logo/TECNO.png" },
+                    { "name": "Huawei", "logo": "/repair/logo/Huawei.png" },
+                    { "name": "Lenovo", "logo": "/repair/logo/Lenovo.png" },
+                    { "name": "Asus", "logo": "/repair/logo/asus.png" },
+                    { "name": "LG", "logo": "/repair/logo/lg.png" },
+                    { "name": "Honor", "logo": "/repair/logo/honor.png" },
+                    { "name": "Itel", "logo": "/repair/logo/itel.png" },
+                    { "name": "And Many More", "logo": "/repair/logo/more.png" }
+                  ]
+                },
+                "moreThanPhones": {
+                  "title": "We Repair More Than Just Phones",
+                  "description": "From tablets and smartwatches to laptops and accessories, our technicians are trained to repair a wide range of devices with precision and care.",
+                  "image": "/repair/bottomcover.png",
+                  "devices": [
+                    { "name": "Tablets", "icon": "Tablet" },
+                    { "name": "Smartwatches", "icon": "Watch" },
+                    { "name": "Laptops", "icon": "Laptop" },
+                    { "name": "Accessories", "icon": "Headphones" }
+                  ]
+                },
+                "cta": {
+                  "icon": "Headphones",
+                  "title": "Can't Find Your Brand?",
+                  "description": "Don't worry! We repair many other brands and models. Just contact us and we'll be happy to help.",
+                  "buttonText": "Contact Us Now",
+                  "buttonLink": "/contact"
+                }
+              }
+            }
+          }
+        },
         "Blog": {
           "variants": {
             "RepairBlog": {
@@ -487,11 +831,182 @@
                   "image": "/blog/b3.png",
                   "date": "May 10, 2024",
                   "category": "Services",
-                  "link": "/blog/professional-repair"
+                  "link": "/blog/why-professional"
                 }
               ],
               "viewAllButtonText": "View All Blogs",
               "readMoreText": "Read More"
+            },
+            "RepairBlogPage": {
+              "subtitle": "FROM OUR BLOG",
+              "title": "Latest Blog & News",
+              "description": "Tips, guides, and insights to keep your devices in the best condition.",
+              "hideViewAll": true,
+              "readMoreText": "Read More",
+              "items": [
+                {
+                  "id": 1,
+                  "title": "5 Signs Your Phone Needs Professional Repair",
+                  "description": "Know the top signs that indicate your phone needs professional repair.",
+                  "image": "/blog/b1.png",
+                  "date": "May 20, 2024",
+                  "category": "Maintenance",
+                  "link": "/blog/professional-repair"
+                },
+                {
+                  "id": 2,
+                  "title": "How to Protect Your Phone from Water Damage",
+                  "description": "Simple tips to protect your phone from water damage and other liquids.",
+                  "image": "/blog/b2.png",
+                  "date": "May 15, 2024",
+                  "category": "Tips",
+                  "link": "/blog/water-damage"
+                },
+                {
+                  "id": 3,
+                  "title": "Why Choose Professional Mobile Repair Services?",
+                  "description": "Top reasons why professional repair is better than DIY solutions.",
+                  "image": "/blog/b3.png",
+                  "date": "May 10, 2024",
+                  "category": "Services",
+                  "link": "/blog/why-professional"
+                },
+                {
+                  "id": 4,
+                  "title": "5 Signs Your Phone Needs Professional Repair",
+                  "description": "Know the top signs that indicate your phone needs professional repair.",
+                  "image": "/blog/b1.png",
+                  "date": "May 20, 2024",
+                  "category": "Maintenance",
+                  "link": "/blog/professional-repair"
+                },
+                {
+                  "id": 5,
+                  "title": "How to Protect Your Phone from Water Damage",
+                  "description": "Simple tips to protect your phone from water damage and other liquids.",
+                  "image": "/blog/b2.png",
+                  "date": "May 15, 2024",
+                  "category": "Tips",
+                  "link": "/blog/water-damage"
+                },
+                {
+                  "id": 6,
+                  "title": "Why Choose Professional Mobile Repair Services?",
+                  "description": "Top reasons why professional repair is better than DIY solutions.",
+                  "image": "/blog/b3.png",
+                  "date": "May 10, 2024",
+                  "category": "Services",
+                  "link": "/blog/why-professional"
+                }
+              ]
+            }
+          }
+        },
+        "BlogDetail": {
+          "variants": {
+            "RepairBlogDetail": {
+              "sidebar": {
+                "aboutTitle": "About Fixaro",
+                "aboutText": "Fixaro is your trusted partner for smartphone repair. We provide fast, reliable and affordable repair services with expert technicians and genuine parts.",
+                "aboutButtonLabel": "Book a Repair",
+                "aboutButtonLink": "/book",
+                "recentTitle": "Recent Posts",
+                "recentPosts": [
+                  { "title": "5 Signs Your Phone Needs Professional Repair", "date": "May 20, 2024", "image": "/blog/b1.png", "href": "/blog/professional-repair" },
+                  { "title": "How to Extend Your Phone Battery Life", "date": "May 15, 2024", "image": "/gallery/battery-1.png", "href": "/blog/battery-replacement" },
+                  { "title": "What to Do If Your Phone Gets Wet", "date": "May 10, 2024", "image": "/blog/b2.png", "href": "/blog/water-damage" },
+                  { "title": "Best Mobile Accessories to Protect Your Phone", "date": "May 05, 2024", "image": "/gallery/others-2.jpg", "href": "/blog" },
+                  { "title": "Software vs Hardware Issues: What's the Difference?", "date": "Apr 28, 2024", "image": "/gallery/others-4.jpg", "href": "/blog/why-professional" }
+                ],
+                "categoriesTitle": "Categories",
+                "categories": [
+                  { "label": "Tips & Guides", "href": "/blog" },
+                  { "label": "Repairs & Solutions", "href": "/blog" },
+                  { "label": "Device Care", "href": "/blog" },
+                  { "label": "Product Updates", "href": "/blog" },
+                  { "label": "News & Announcements", "href": "/blog" }
+                ],
+                "helpTitle": "Need Help?",
+                "helpText": "Our support team is always ready to help you with your repair needs.",
+                "helpPhone": "+91 98765 43210",
+                "helpEmail": "support@fixpoint.com",
+                "helpButtonLabel": "Contact Us",
+                "helpButtonLink": "/contact"
+              },
+              "posts": [
+                {
+                  "slug": "professional-repair",
+                  "category": "TIPS & GUIDES",
+                  "title": "5 Signs Your Phone Needs Professional Repair",
+                  "excerpt": "Is your phone not working like it used to? Here are the top signs that indicate it's time to visit a professional repair service.",
+                  "author": "By Fixaro Team",
+                  "date": "May 20, 2024",
+                  "readTime": "5 min read",
+                  "heroImage": "/blog/b1.png",
+                  "intro": "Our smartphones have become an essential part of our daily lives. From staying connected to managing work and entertainment, we rely on our devices for almost everything. But like any piece of technology, phones can run into issues over time. Ignoring minor problems can lead to bigger, more expensive repairs down the line. Here are 5 clear signs that your phone needs professional attention.",
+                  "signs": [
+                    { "title": "1. Cracked or Damaged Screen", "image": "/gallery/screen-1.png", "text": "A cracked screen is more than just a cosmetic issue. It can worsen over time and affect touch responsiveness. It may also expose your phone to dust and moisture, causing further internal damage.", "bullet": "Professional screen replacement restores clarity and touch sensitivity." },
+                    { "title": "2. Battery Drains Too Fast", "image": "/gallery/battery-1.png", "text": "If your phone battery doesn't last even half a day or shuts down suddenly, the battery may be worn out. A new battery can bring your phone back to life.", "bullet": "We use original batteries with full performance and safety standards." },
+                    { "title": "3. Phone Overheats Frequently", "image": "/gallery/others-1.png", "text": "Some heating is normal, but if your phone gets too hot often, it could be due to software issues, a bad battery, or faulty internal components.", "bullet": "Our experts diagnose the real cause and fix it to keep your device safe." },
+                    { "title": "4. Charging Problems", "image": "/gallery/charging-1.png", "text": "Loose charging port, slow charging, or not charging at all are common issues caused by dirt, wear and tear, or damaged parts.", "bullet": "We clean or replace your charging port with precision to restore safe and fast charging." },
+                    { "title": "5. App Crashes or Slow Performance", "image": "/blog/b3.png", "text": "If apps crash frequently or your phone lags even with simple tasks, it could be a sign of internal storage problems, software bugs, or hardware issues.", "bullet": "We optimize and repair your hardware for smooth and lag-free performance." }
+                  ]
+                },
+                {
+                  "slug": "water-damage",
+                  "category": "TIPS & GUIDES",
+                  "title": "How to Protect Your Phone from Water Damage",
+                  "excerpt": "Simple tips to protect your phone from water damage and other liquids.",
+                  "author": "By Fixaro Team",
+                  "date": "May 15, 2024",
+                  "readTime": "4 min read",
+                  "heroImage": "/blog/b2.png",
+                  "intro": "Water and electronics never mix well. A small spill or a rainy commute can turn into a costly repair if you don't act quickly. These practical steps help you prevent damage and know what to do if your phone gets wet.",
+                  "signs": [
+                    { "title": "1. Keep Liquids Away", "image": "/gallery/water-1.png", "text": "Avoid using your phone near sinks, pools and while charging in humid bathrooms. Even a few drops can enter speaker grills and charging ports.", "bullet": "A simple habit of keeping drinks away from your desk can save your device." },
+                    { "title": "2. Use a Protective Case", "image": "/gallery/others-2.jpg", "text": "A sealed case and port covers add a layer of protection against splashes and light rain, especially if your phone is not officially water resistant.", "bullet": "We can also inspect seals and ports after any liquid exposure." },
+                    { "title": "3. Act Fast If It Gets Wet", "image": "/gallery/water-1.png", "text": "Power it off immediately, do not charge it, and do not use heat tools like a hair dryer. Bring it to a technician as soon as possible.", "bullet": "Quick professional drying and diagnosis greatly improves recovery chances." },
+                    { "title": "4. Skip the Rice Myth", "image": "/gallery/others-3.jpg", "text": "Rice does not remove moisture from internal boards and can leave starch dust inside ports. It often delays proper repair.", "bullet": "Let experts open, clean and test the device the right way." },
+                    { "title": "5. Get It Checked Professionally", "image": "/blog/b2.png", "text": "Corrosion can start hours after a spill even if the phone still turns on. A checkup now can prevent a dead device later.", "bullet": "Our water-damage service includes inspection, cleaning and functional testing." }
+                  ]
+                },
+                {
+                  "slug": "why-professional",
+                  "category": "TIPS & GUIDES",
+                  "title": "Why Choose Professional Mobile Repair Services?",
+                  "excerpt": "Top reasons why professional repair is better than DIY solutions.",
+                  "author": "By Fixaro Team",
+                  "date": "May 10, 2024",
+                  "readTime": "4 min read",
+                  "heroImage": "/blog/b3.png",
+                  "intro": "DIY videos make repairs look easy, but one wrong screw or a cheap part can permanently damage your phone. Professional repair protects your device, data and warranty with the right tools and genuine parts.",
+                  "signs": [
+                    { "title": "1. Genuine Parts Matter", "image": "/gallery/screen-2.jpg", "text": "Low-quality screens and batteries fail quickly and can even be unsafe. Certified parts keep display quality, battery life and safety at original levels.", "bullet": "We use genuine and high-grade parts for lasting results." },
+                    { "title": "2. Expert Diagnosis", "image": "/gallery/workshop-1.png", "text": "A lagging phone may be software, storage or hardware. Guessing the issue often leads to replacing the wrong part.", "bullet": "Our technicians isolate the real cause before any repair starts." },
+                    { "title": "3. The Right Tools", "image": "/gallery/devices-1.png", "text": "Opening modern phones needs heat pads, suction tools and ESD-safe benches. Kitchen tools easily crack glass or tear flex cables.", "bullet": "Professional tools keep the repair clean, safe and precise." },
+                    { "title": "4. Warranty Protection", "image": "/gallery/battery-2.jpg", "text": "Most DIY attempts void remaining coverage. A proper service invoice and warranty give you peace of mind after the job.", "bullet": "We provide up to 90 days warranty on most repairs." },
+                    { "title": "5. Faster, Safer Turnaround", "image": "/blog/b3.png", "text": "What takes hours at home is often done in 30–60 minutes in the workshop, with quality checks before handover.", "bullet": "Book a repair and get your phone back working like new." }
+                  ]
+                },
+                {
+                  "slug": "battery-replacement",
+                  "category": "TIPS & GUIDES",
+                  "title": "6 Signs Your Phone Battery Needs Replacement",
+                  "excerpt": "Know the top signs that indicate your phone battery needs a replacement.",
+                  "author": "By Fixaro Team",
+                  "date": "May 24, 2024",
+                  "readTime": "4 min read",
+                  "heroImage": "/blog/b1.png",
+                  "intro": "Batteries wear out with every charge cycle. If your phone feels slower, hotter or dies too soon, it may be time for a replacement rather than a new device.",
+                  "signs": [
+                    { "title": "1. Charge Does Not Last", "image": "/gallery/battery-1.png", "text": "If you need to plug in more than twice a day with normal use, battery health has likely dropped.", "bullet": "A genuine replacement restores all-day backup." },
+                    { "title": "2. Sudden Shutdowns", "image": "/gallery/battery-2.jpg", "text": "Phones that power off at 20% or 30% have an aging cell that cannot hold voltage under load.", "bullet": "We test health and replace only when needed." },
+                    { "title": "3. Unusual Heat", "image": "/gallery/others-1.png", "text": "A swollen or stressed battery often runs hot even when idle or while charging overnight.", "bullet": "Stop using a swollen battery and get it replaced immediately." },
+                    { "title": "4. Slow or Failed Charging", "image": "/gallery/charging-1.png", "text": "If charging is very slow with the original charger, the cell or charging circuit may be failing.", "bullet": "We check port, cable and battery before recommending parts." },
+                    { "title": "5. Phone Feels Sluggish", "image": "/gallery/others-4.jpg", "text": "Old batteries throttle performance to stay safe, which makes apps lag and cameras slow.", "bullet": "A new battery often makes the phone feel new again." }
+                  ]
+                }
+              ]
             }
           }
         },
@@ -520,6 +1035,699 @@
                 { "label": "Our Teams", "url": "/team" }
               ],
               "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbBrandsWeRepair": {
+              "title": "Brands We Repair",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "Brands We Repair", "url": "/brands-we-repair" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbServices": {
+              "title": "Repair Service",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "Repair Service", "url": "/services" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbServiceDetail": {
+              "title": "Service Detail",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "Service Detail", "url": "/services" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbBook": {
+              "title": "Book A Repair",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "Book A Repair", "url": "/book" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbPricing": {
+              "title": "Pricing",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "Pricing", "url": "/pricing" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbGallery": {
+              "title": "Our Gallery",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "Our Gallery", "url": "/gallery" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbTestimonials": {
+              "title": "Testimonial",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "Testimonial", "url": "/testimonials" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbFaq": {
+              "title": "FAQs",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "FAQs", "url": "/faq" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbBlog": {
+              "title": "Blogs",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "Blogs", "url": "/blog" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbBlogDetail": {
+              "title": "Blog Detail",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "Blogs", "url": "/blog" },
+                { "label": "Blog Detail", "url": "/blog" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbContact": {
+              "title": "Contact Us",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "Contact Us", "url": "/contact" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbCareer": {
+              "title": "Career",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "Career", "url": "/career" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            },
+            "RepairBreadcrumbCareerDetail": {
+              "title": "Career Detail",
+              "paths": [
+                { "label": "Home", "url": "/" },
+                { "label": "Career", "url": "/career" },
+                { "label": "Career Detail", "url": "/career" }
+              ],
+              "bgImage": "/img/footerbg.png"
+            }
+          }
+        },
+        "Contact": {
+          "variants": {
+            "RepairContact": {
+              "subtitle": "CONTACT US",
+              "titlePart1": "We're Here To",
+              "titleHighlight": "Help",
+              "description": "Have a question, need a repair, or just want to know more about our services? Our team is ready to assist you with fast and reliable support.",
+              "info": [
+                { "icon": "Phone", "title": "Call Us", "lines": ["+1 123 456 7890", "Mon - Sat: 9:00 AM - 7:00 PM"] },
+                { "icon": "Mail", "title": "Email Us", "lines": ["support@fixaro.com", "We reply within 24 hours"] },
+                { "icon": "MapPin", "title": "Our Location", "lines": ["123 Repair Hub Street, Suite 100", "New York, NY 10001, USA"] }
+              ],
+              "form": {
+                "title": "Get In Touch Today",
+                "firstName": "First Name",
+                "lastName": "Last Name",
+                "email": "Email Address",
+                "phone": "Phone Number",
+                "service": "Select Service",
+                "servicePlaceholder": "Select Service",
+                "services": ["Screen Repair", "Battery Replacement", "Water Damage", "Charging Port Repair", "Software Repair", "Camera Repair"],
+                "message": "Your Message",
+                "submitLabel": "Send Message",
+                "privacyNote": "Your information is safe and secure with us."
+              },
+              "map": {
+                "embedUrl": "https://maps.google.com/maps?q=New+York&z=12&output=embed",
+                "cardTitle": "Fixaro Mobile Repair",
+                "cardAddress": "123 Repair Hub Street, Suite 100\nNew York, NY 10001, USA",
+                "mapsLabel": "View on Google Maps",
+                "mapsUrl": "https://maps.google.com/?q=123+Repair+Hub+Street+New+York"
+              }
+            }
+          }
+        },
+        "Career": {
+          "variants": {
+            "RepairCareer": {
+              "whyJoin": {
+                "subtitle": "WHY JOIN FIXARO?",
+                "titlePart1": "More Than",
+                "titleHighlight": "Just a Job",
+                "description": "We believe in empowering our team, encouraging innovation, and providing a supportive environment to grow and succeed.",
+                "cards": [
+                  { "icon": "TrendingUp", "title": "Career Growth", "description": "Clear career path with training and development opportunities." },
+                  { "icon": "BookOpen", "title": "Learn & Grow", "description": "Work with latest tools and technologies in mobile repair." },
+                  { "icon": "Users", "title": "Supportive Team", "description": "Collaborative culture where your ideas and skills are valued." },
+                  { "icon": "Award", "title": "Recognition", "description": "Your hard work is recognized and rewarded at every milestone." }
+                ]
+              },
+              "openings": {
+                "subtitle": "OPEN POSITIONS",
+                "titlePart1": "Explore Current",
+                "titleHighlight": "Opportunities",
+                "description": "Check out our current openings and find the role that's right for you.",
+                "buttonLabel": "View All Openings",
+                "buttonLink": "#openings",
+                "applyLabel": "Apply Now",
+                "jobs": [
+                  { "icon": "Smartphone", "title": "Mobile Repair Technician", "description": "Repair smartphones and tablets with precision.", "location": "Delhi, India", "type": "Full-Time", "applyLink": "/career/mobile-repair-technician" },
+                  { "icon": "Headphones", "title": "Customer Support Executive", "description": "Assist customers and provide the best solutions.", "location": "Delhi, India", "type": "Full-Time", "applyLink": "/career/customer-support-executive" },
+                  { "icon": "ShoppingCart", "title": "Store Incharge", "description": "Manage store operations and team efficiently.", "location": "Delhi, India", "type": "Full-Time", "applyLink": "/career/store-incharge" },
+                  { "icon": "Megaphone", "title": "Digital Marketing Executive", "description": "Grow our brand and reach more customers.", "location": "Remote", "type": "Full-Time", "applyLink": "/career/digital-marketing-executive" },
+                  { "icon": "Wrench", "title": "Hardware Engineer", "description": "Work on advanced-level board repairs.", "location": "Delhi, India", "type": "Full-Time", "applyLink": "/career/hardware-engineer" }
+                ]
+              }
+            }
+          }
+        },
+        "CareerDetail": {
+          "variants": {
+            "RepairCareerDetail": {
+              "form": {
+                "title": "Apply for this Position",
+                "fullName": "Full Name *",
+                "email": "Email Address *",
+                "phone": "Phone Number *",
+                "experience": "Experience *",
+                "experiencePlaceholder": "Select your experience",
+                "experienceOptions": ["0 - 1 Years", "1 - 3 Years", "3 - 5 Years", "5+ Years"],
+                "location": "Current Location *",
+                "resume": "Upload Resume *",
+                "resumeHint": "PDF, DOC, DOCX (Max. 5MB)",
+                "coverLetter": "Cover Letter (Optional)",
+                "coverPlaceholder": "Write something about yourself...",
+                "submitLabel": "Submit Application",
+                "privacyNote": "Your information is 100% safe and secure."
+              },
+              "whyJoin": {
+                "title": "Why Join Fixpoint?",
+                "items": [
+                  { "icon": "Handshake", "text": "Work with experienced professionals" },
+                  { "icon": "GraduationCap", "text": "Hands-on training and certifications" },
+                  { "icon": "Camera", "text": "Performance based growth" },
+                  { "icon": "Users", "text": "Supportive and positive environment" },
+                  { "icon": "Award", "text": "Be part of a growing brand" }
+                ],
+                "image": "/gallery/workshop-1.png"
+              },
+              "jobs": [
+                {
+                  "slug": "mobile-repair-technician",
+                  "subtitle": "WE'RE HIRING",
+                  "title": "Mobile Repair Technician",
+                  "intro": "Join Fixpoint and work with a team of experts who are passionate about fixing devices and creating great customer experiences.",
+                  "location": "Delhi, India",
+                  "type": "Full-Time",
+                  "posted": "Posted: May 25, 2025",
+                  "facts": [
+                    { "icon": "Wrench", "label": "Department", "value": "Repair Service" },
+                    { "icon": "Clock", "label": "Experience", "value": "1 - 3 Years" },
+                    { "icon": "Briefcase", "label": "Employment Type", "value": "Full-Time" },
+                    { "icon": "Wallet", "label": "Salary", "value": "₹18,000 - ₹28,000\nPer Month" }
+                  ],
+                  "overviewTitle": "Job Overview",
+                  "overview": "We are looking for a skilled and detail-oriented Mobile Repair Technician to join our team. You will be responsible for diagnosing and repairing smartphones and tablets, ensuring high-quality service and customer satisfaction.",
+                  "responsibilitiesTitle": "Key Responsibilities",
+                  "responsibilities": [
+                    "Diagnose and repair hardware and software issues in mobile devices.",
+                    "Replace damaged screens, batteries, cameras, and other components.",
+                    "Perform troubleshooting and ensure devices are repaired efficiently.",
+                    "Maintain accurate repair records and update service reports.",
+                    "Ensure high customer satisfaction by delivering excellent service.",
+                    "Keep up-to-date with the latest mobile technologies and repair techniques."
+                  ],
+                  "requirementsTitle": "Requirements",
+                  "requirements": [
+                    "1 - 3 years of experience in mobile repair or related field.",
+                    "Strong knowledge of smartphone hardware and software.",
+                    "Ability to work with small tools and delicate components.",
+                    "Good problem-solving skills and attention to detail.",
+                    "High school diploma or equivalent technical certification is a plus."
+                  ],
+                  "offerTitle": "What We Offer",
+                  "offer": [
+                    { "icon": "Wallet", "title": "Competitive Salary" },
+                    { "icon": "BookOpen", "title": "Training & Skill Development" },
+                    { "icon": "TrendingUp", "title": "Career Growth Opportunities" },
+                    { "icon": "Users", "title": "Friendly & Supportive Work Environment" }
+                  ],
+                  "cta": {
+                    "title": "Join Fixpoint and Build Your Future",
+                    "description": "Be a part of a passionate team that values skills, innovation and customer satisfaction.",
+                    "buttonLabel": "View All Open Positions",
+                    "buttonLink": "/career#openings"
+                  }
+                },
+                {
+                  "slug": "customer-support-executive",
+                  "subtitle": "WE'RE HIRING",
+                  "title": "Customer Support Executive",
+                  "intro": "Join Fixpoint and help customers with the best repair solutions, clear communication and a friendly service experience.",
+                  "location": "Delhi, India",
+                  "type": "Full-Time",
+                  "posted": "Posted: May 25, 2025",
+                  "facts": [
+                    { "icon": "Headphones", "label": "Department", "value": "Customer Support" },
+                    { "icon": "Clock", "label": "Experience", "value": "0 - 2 Years" },
+                    { "icon": "Briefcase", "label": "Employment Type", "value": "Full-Time" },
+                    { "icon": "Wallet", "label": "Salary", "value": "₹15,000 - ₹22,000\nPer Month" }
+                  ],
+                  "overviewTitle": "Job Overview",
+                  "overview": "We are looking for a Customer Support Executive who can assist walk-in and phone customers, explain repair options clearly, and make sure every customer leaves with a confident, positive experience.",
+                  "responsibilitiesTitle": "Key Responsibilities",
+                  "responsibilities": [
+                    "Greet customers and understand their device issues.",
+                    "Create job tickets and keep customers updated on repair status.",
+                    "Explain repair options, timelines and pricing clearly.",
+                    "Handle follow-ups, queries and after-service support.",
+                    "Maintain a polite, professional tone on every interaction.",
+                    "Coordinate with technicians to deliver accurate information."
+                  ],
+                  "requirementsTitle": "Requirements",
+                  "requirements": [
+                    "Good communication skills in English and Hindi.",
+                    "Basic knowledge of smartphones and common issues.",
+                    "Ability to stay calm with customers under pressure.",
+                    "Computer and CRM comfort is a plus.",
+                    "High school diploma or equivalent."
+                  ],
+                  "offerTitle": "What We Offer",
+                  "offer": [
+                    { "icon": "Wallet", "title": "Competitive Salary" },
+                    { "icon": "BookOpen", "title": "Training & Skill Development" },
+                    { "icon": "TrendingUp", "title": "Career Growth Opportunities" },
+                    { "icon": "Users", "title": "Friendly & Supportive Work Environment" }
+                  ],
+                  "cta": {
+                    "title": "Join Fixpoint and Build Your Future",
+                    "description": "Be a part of a passionate team that values skills, innovation and customer satisfaction.",
+                    "buttonLabel": "View All Open Positions",
+                    "buttonLink": "/career#openings"
+                  }
+                },
+                {
+                  "slug": "store-incharge",
+                  "subtitle": "WE'RE HIRING",
+                  "title": "Store Incharge",
+                  "intro": "Lead a Fixpoint store, manage daily operations, and build a team that delivers reliable repair service every day.",
+                  "location": "Delhi, India",
+                  "type": "Full-Time",
+                  "posted": "Posted: May 25, 2025",
+                  "facts": [
+                    { "icon": "Store", "label": "Department", "value": "Store Operations" },
+                    { "icon": "Clock", "label": "Experience", "value": "2 - 5 Years" },
+                    { "icon": "Briefcase", "label": "Employment Type", "value": "Full-Time" },
+                    { "icon": "Wallet", "label": "Salary", "value": "₹25,000 - ₹40,000\nPer Month" }
+                  ],
+                  "overviewTitle": "Job Overview",
+                  "overview": "We are looking for a Store Incharge to manage store operations, inventory, staff and customer experience. You will ensure smooth daily workflow and high service quality.",
+                  "responsibilitiesTitle": "Key Responsibilities",
+                  "responsibilities": [
+                    "Oversee daily store operations and technician schedules.",
+                    "Manage inventory, parts and vendor coordination.",
+                    "Monitor service quality and customer feedback.",
+                    "Handle billing, reports and store targets.",
+                    "Train and support store staff.",
+                    "Maintain cleanliness, safety and brand standards."
+                  ],
+                  "requirementsTitle": "Requirements",
+                  "requirements": [
+                    "2+ years of experience in retail or service operations.",
+                    "Strong leadership and people-management skills.",
+                    "Basic understanding of mobile repair workflow.",
+                    "Comfort with reports, stock and billing.",
+                    "Ability to work in a fast-paced store environment."
+                  ],
+                  "offerTitle": "What We Offer",
+                  "offer": [
+                    { "icon": "Wallet", "title": "Competitive Salary" },
+                    { "icon": "BookOpen", "title": "Training & Skill Development" },
+                    { "icon": "TrendingUp", "title": "Career Growth Opportunities" },
+                    { "icon": "Users", "title": "Friendly & Supportive Work Environment" }
+                  ],
+                  "cta": {
+                    "title": "Join Fixpoint and Build Your Future",
+                    "description": "Be a part of a passionate team that values skills, innovation and customer satisfaction.",
+                    "buttonLabel": "View All Open Positions",
+                    "buttonLink": "/career#openings"
+                  }
+                },
+                {
+                  "slug": "digital-marketing-executive",
+                  "subtitle": "WE'RE HIRING",
+                  "title": "Digital Marketing Executive",
+                  "intro": "Grow the Fixpoint brand online, reach more customers, and run campaigns that bring real repair bookings.",
+                  "location": "Remote",
+                  "type": "Full-Time",
+                  "posted": "Posted: May 25, 2025",
+                  "facts": [
+                    { "icon": "Megaphone", "label": "Department", "value": "Marketing" },
+                    { "icon": "Clock", "label": "Experience", "value": "1 - 3 Years" },
+                    { "icon": "Briefcase", "label": "Employment Type", "value": "Full-Time" },
+                    { "icon": "Wallet", "label": "Salary", "value": "₹20,000 - ₹35,000\nPer Month" }
+                  ],
+                  "overviewTitle": "Job Overview",
+                  "overview": "We are looking for a Digital Marketing Executive to manage social media, local SEO, ads and content that help Fixpoint attract more customers.",
+                  "responsibilitiesTitle": "Key Responsibilities",
+                  "responsibilities": [
+                    "Plan and publish social media content.",
+                    "Run Google and Meta campaigns for store bookings.",
+                    "Track leads, conversions and weekly reports.",
+                    "Manage listings, reviews and local SEO.",
+                    "Coordinate creatives with the design team.",
+                    "Support store-level promotions and offers."
+                  ],
+                  "requirementsTitle": "Requirements",
+                  "requirements": [
+                    "1+ years of digital marketing experience.",
+                    "Hands-on with Meta Ads, Google Ads or similar.",
+                    "Strong written communication.",
+                    "Basic graphic or Canva skills are a plus.",
+                    "Ability to work independently in a remote setup."
+                  ],
+                  "offerTitle": "What We Offer",
+                  "offer": [
+                    { "icon": "Wallet", "title": "Competitive Salary" },
+                    { "icon": "BookOpen", "title": "Training & Skill Development" },
+                    { "icon": "TrendingUp", "title": "Career Growth Opportunities" },
+                    { "icon": "Users", "title": "Friendly & Supportive Work Environment" }
+                  ],
+                  "cta": {
+                    "title": "Join Fixpoint and Build Your Future",
+                    "description": "Be a part of a passionate team that values skills, innovation and customer satisfaction.",
+                    "buttonLabel": "View All Open Positions",
+                    "buttonLink": "/career#openings"
+                  }
+                },
+                {
+                  "slug": "hardware-engineer",
+                  "subtitle": "WE'RE HIRING",
+                  "title": "Hardware Engineer",
+                  "intro": "Work on advanced board-level repairs and help Fixpoint solve complex hardware issues with precision.",
+                  "location": "Delhi, India",
+                  "type": "Full-Time",
+                  "posted": "Posted: May 25, 2025",
+                  "facts": [
+                    { "icon": "Wrench", "label": "Department", "value": "Technical Repair" },
+                    { "icon": "Clock", "label": "Experience", "value": "2 - 4 Years" },
+                    { "icon": "Briefcase", "label": "Employment Type", "value": "Full-Time" },
+                    { "icon": "Wallet", "label": "Salary", "value": "₹22,000 - ₹38,000\nPer Month" }
+                  ],
+                  "overviewTitle": "Job Overview",
+                  "overview": "We are looking for a Hardware Engineer experienced in microsoldering and board-level diagnosis for smartphones and tablets.",
+                  "responsibilitiesTitle": "Key Responsibilities",
+                  "responsibilities": [
+                    "Diagnose motherboard and charging-related faults.",
+                    "Perform microsoldering and component-level repairs.",
+                    "Use tools such as microscope, hot air and DC power supply.",
+                    "Document repair methods and success rates.",
+                    "Support technicians on complex jobs.",
+                    "Stay updated with new device chipsets and issues."
+                  ],
+                  "requirementsTitle": "Requirements",
+                  "requirements": [
+                    "Hands-on board-level repair experience.",
+                    "Comfort with soldering iron, microscope and schematic reading.",
+                    "Strong attention to detail and quality.",
+                    "Ability to work under turnaround targets.",
+                    "Technical diploma or equivalent experience."
+                  ],
+                  "offerTitle": "What We Offer",
+                  "offer": [
+                    { "icon": "Wallet", "title": "Competitive Salary" },
+                    { "icon": "BookOpen", "title": "Training & Skill Development" },
+                    { "icon": "TrendingUp", "title": "Career Growth Opportunities" },
+                    { "icon": "Users", "title": "Friendly & Supportive Work Environment" }
+                  ],
+                  "cta": {
+                    "title": "Join Fixpoint and Build Your Future",
+                    "description": "Be a part of a passionate team that values skills, innovation and customer satisfaction.",
+                    "buttonLabel": "View All Open Positions",
+                    "buttonLink": "/career#openings"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Policy": {
+          "variants": {
+            "RepairPolicy": {
+              "bgImage": "/img/footerbg.png",
+              "pages": [
+                {
+                  "slug": "warranty-policy",
+                  "breadcrumbTitle": "Warranty Policy",
+                  "titlePart1": "Warranty",
+                  "titleHighlight": "Policy",
+                  "intro": "At FixPoint, we stand behind the quality of our work. This warranty policy explains what is covered, for how long, and how you can raise a claim if something goes wrong after your repair.",
+                  "sections": [
+                    {
+                      "title": "Coverage",
+                      "text": "Our warranty applies to the specific repair performed and the parts used by FixPoint. It covers workmanship and genuine replacement parts fitted during the service, provided the device is used under normal conditions."
+                    },
+                    {
+                      "title": "Warranty Period",
+                      "text": "Most repairs include up to 90 days warranty from the date of service. The exact period is mentioned on your invoice. Warranty starts on the day you collect the device and is valid only for the original customer."
+                    },
+                    {
+                      "title": "What is Covered",
+                      "text": "The same fault returning on the repaired part or related workmanship is covered. If a part we installed fails during the warranty period, we will inspect and repair or replace it at no extra labour cost, subject to parts availability."
+                    },
+                    {
+                      "title": "What is Not Covered",
+                      "text": "Warranty does not cover physical or liquid damage after the repair, software issues unrelated to our work, unauthorized third-party repairs, wear and tear, or faults in parts that were not serviced by us."
+                    },
+                    {
+                      "title": "How to Claim",
+                      "text": "Bring the device along with your original invoice to the same store. Our team will inspect the issue and process a valid warranty claim as quickly as possible. A claim may be declined if the seal, screws or repair area has been tampered with."
+                    },
+                    {
+                      "title": "Need Help?",
+                      "text": "If you have questions about your warranty, please contact our support team. We are always here to help and make your experience with FixPoint smooth and worry-free."
+                    }
+                  ]
+                },
+                {
+                  "slug": "refund-policy",
+                  "breadcrumbTitle": "Refund Policy",
+                  "titlePart1": "Refund",
+                  "titleHighlight": "Policy",
+                  "intro": "At FixPoint, customer satisfaction is our top priority. We are committed to offering transparent and fair services. Please read our refund policy carefully before using our mobile repair services.",
+                  "sections": [
+                    {
+                      "title": "Eligibility for Refund",
+                      "text": "Refunds are applicable only in specific situations where we are unable to complete the repair, the same fault reoccurs within the warranty period, or incorrect charges have been applied by our team. We review each case carefully to ensure fairness and transparency."
+                    },
+                    {
+                      "title": "Refund Timeframe",
+                      "text": "All refund requests must be submitted within 7 days from the date of service. Requests made after this period may not be considered. Once approved, the refund will be processed within 5–7 business days using the original payment method."
+                    },
+                    {
+                      "title": "Non-Refundable Cases",
+                      "text": "Refunds are not applicable for physical or liquid damage that occurs after the repair, change of mind after the service is completed, issues caused by unauthorized repair attempts, or software problems that are not related to our service. These conditions help us maintain the quality and reliability of our work."
+                    },
+                    {
+                      "title": "How Refunds Are Processed",
+                      "text": "Once your refund request is approved by our team, the amount will be credited back to your original payment source. You will receive a confirmation once the refund has been successfully processed."
+                    },
+                    {
+                      "title": "Need Help?",
+                      "text": "If you have any questions or need clarification regarding our refund policy, please feel free to contact our support team. We are always here to help and make your experience with FixPoint smooth and worry-free."
+                    }
+                  ]
+                },
+                {
+                  "slug": "privacy",
+                  "breadcrumbTitle": "Privacy Policy",
+                  "titlePart1": "Privacy",
+                  "titleHighlight": "Policy",
+                  "intro": "At FixPoint, we respect your privacy. This policy explains what information we collect when you book a repair or visit our website, how we use it, and the choices you have.",
+                  "sections": [
+                    {
+                      "title": "Information We Collect",
+                      "text": "We may collect your name, phone number, email, device details and service history when you book a repair, apply for a job, or contact support. If you visit our website, basic usage data such as pages viewed may also be collected."
+                    },
+                    {
+                      "title": "How We Use Information",
+                      "text": "We use your information to complete repairs, share job status, process payments, send service updates, and improve our customer experience. We do not sell your personal data to third parties."
+                    },
+                    {
+                      "title": "Data Sharing",
+                      "text": "We may share information with payment providers, logistics partners or legal authorities only when required to complete your service or comply with the law. Access is limited to people who need it to do their job."
+                    },
+                    {
+                      "title": "Cookies",
+                      "text": "Our website may use cookies to remember preferences and understand how visitors use the site. You can control cookies through your browser settings. Disabling cookies may affect some site features."
+                    },
+                    {
+                      "title": "Your Rights",
+                      "text": "You may request to view, update or delete the personal information we hold about you, subject to legal and operational requirements such as invoices and warranty records."
+                    },
+                    {
+                      "title": "Need Help?",
+                      "text": "If you have questions about this privacy policy, please contact our support team. We are always here to help and make your experience with FixPoint smooth and worry-free."
+                    }
+                  ]
+                },
+                {
+                  "slug": "terms",
+                  "breadcrumbTitle": "Terms & Conditions",
+                  "titlePart1": "Terms &",
+                  "titleHighlight": "Conditions",
+                  "intro": "These terms and conditions govern your use of FixPoint services, including in-store repairs, bookings made through our website, and related support. Please read them carefully before using our services.",
+                  "sections": [
+                    {
+                      "title": "Acceptance of Terms",
+                      "text": "By booking a repair or using our website, you agree to these terms. If you do not agree, please do not use our services. We may update these terms from time to time, and the latest version will always be available on this page."
+                    },
+                    {
+                      "title": "Services",
+                      "text": "Repair estimates, timelines and spare-part availability can vary by device model and condition. Final pricing is confirmed after diagnosis. We will inform you before proceeding if additional work or parts are required."
+                    },
+                    {
+                      "title": "User Responsibilities",
+                      "text": "Please back up your data before handing over a device. Remove SIM cards, memory cards and passwords where possible. FixPoint is not responsible for data loss unless it is caused by proven negligence on our part."
+                    },
+                    {
+                      "title": "Payments",
+                      "text": "Payment is due as per the invoice. Devices may be released only after full payment. Any discounts or offers apply only as stated at the time of booking and cannot be combined unless mentioned."
+                    },
+                    {
+                      "title": "Limitation of Liability",
+                      "text": "Our liability is limited to the value of the repair paid for the specific service. We are not liable for indirect loss, delay caused by parts shortage, or issues that arise from misuse after the device is returned."
+                    },
+                    {
+                      "title": "Need Help?",
+                      "text": "If you have questions about these terms, please contact our support team. We are always here to help and make your experience with FixPoint smooth and worry-free."
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "Sitemap": {
+          "variants": {
+            "RepairSitemap": {
+              "logo": "/logo/logo.png",
+              "tagline": "MOBILE REPAIR EXPERTS",
+              "groups": [
+                {
+                  "number": "01",
+                  "title": "Home",
+                  "icon": "Home",
+                  "links": [{ "label": "Home", "href": "/" }]
+                },
+                {
+                  "number": "02",
+                  "title": "About Us",
+                  "icon": "Users",
+                  "links": [
+                    { "label": "About Us", "href": "/about" },
+                    { "label": "Why Choose Us", "href": "/why-choose-us" },
+                    { "label": "Our Team", "href": "/team" },
+                    { "label": "Team Detail", "href": "/team/1" }
+                  ]
+                },
+                {
+                  "number": "03",
+                  "title": "Services",
+                  "icon": "Wrench",
+                  "links": [
+                    { "label": "Repair Services", "href": "/services" },
+                    { "label": "Service Detail", "href": "/services/screen-repair" },
+                    { "label": "Brands We Repair", "href": "/brands-we-repair" }
+                  ]
+                },
+                {
+                  "number": "04",
+                  "title": "Book & Pricing",
+                  "icon": "Calculator",
+                  "links": [
+                    { "label": "Book a Repair", "href": "/book" },
+                    { "label": "Pricing / Repair Cost", "href": "/pricing" }
+                  ]
+                },
+                {
+                  "number": "05",
+                  "title": "Gallery",
+                  "icon": "Image",
+                  "links": [
+                    { "label": "Photo Gallery", "href": "/gallery" },
+                    { "label": "Video Gallery", "href": "/gallery" }
+                  ]
+                },
+                {
+                  "number": "06",
+                  "title": "Testimonials",
+                  "icon": "Quote",
+                  "links": [{ "label": "Testimonials", "href": "/testimonials" }]
+                },
+                {
+                  "number": "07",
+                  "title": "Blog",
+                  "icon": "FileText",
+                  "links": [
+                    { "label": "Blog", "href": "/blog" },
+                    { "label": "Blog Detail", "href": "/blog/professional-repair" }
+                  ]
+                },
+                {
+                  "number": "08",
+                  "title": "Help & Info",
+                  "icon": "HelpCircle",
+                  "links": [
+                    { "label": "FAQ", "href": "/faq" },
+                    { "label": "Privacy Policy", "href": "/privacy" },
+                    { "label": "Terms & Conditions", "href": "/terms" },
+                    { "label": "Refund Policy", "href": "/refund-policy" },
+                    { "label": "Warranty Policy", "href": "/warranty-policy" }
+                  ]
+                },
+                {
+                  "number": "09",
+                  "title": "Careers",
+                  "icon": "Briefcase",
+                  "links": [
+                    { "label": "Careers", "href": "/career" },
+                    { "label": "Career Detail", "href": "/career/mobile-repair-technician" }
+                  ]
+                },
+                {
+                  "number": "10",
+                  "title": "Contact",
+                  "icon": "Phone",
+                  "links": [{ "label": "Contact Us", "href": "/contact" }]
+                }
+              ],
+              "others": [
+                {
+                  "number": "11",
+                  "title": "Others",
+                  "icon": "AlertTriangle",
+                  "links": [{ "label": "404 Page", "href": "/404" }]
+                },
+                {
+                  "number": "12",
+                  "title": "Sitemap",
+                  "icon": "Network",
+                  "links": [{ "label": "Sitemap", "href": "/sitemap" }]
+                }
+              ]
             }
           }
         },
@@ -549,6 +1757,244 @@
                 "title": "We Fix. You Relax.",
                 "description": "Fast, reliable and professional mobile repair solutions."
               }
+            }
+          }
+        },
+        "BookRepair": {
+          "variants": {
+            "RepairBookRepair": {
+              "intro": {
+                "subtitle": "BOOK A REPAIR",
+                "titlePart1": "Book Your Repair",
+                "titleHighlight": "Hassle-Free",
+                "description": "Fill in the details below and our team will get back to you to confirm your repair as soon as possible.",
+                "image": "/img/reapirbook.png",
+                "features": [
+                  { "icon": "Clock", "title": "Quick & Easy Booking", "description": "Book your repair in just a few clicks." },
+                  { "icon": "ShieldCheck", "title": "Expert Technicians", "description": "Your device is in safe hands." },
+                  { "icon": "Award", "title": "90 Days Warranty", "description": "We stand by the quality of our work." },
+                  { "icon": "IndianRupee", "title": "Affordable Pricing", "description": "Best repair solutions at fair prices." }
+                ]
+              },
+              "form": {
+                "title": "Book Your Repair",
+                "icon": "CalendarDays",
+                "submitLabel": "Submit Booking",
+                "privacyNote": "Your information is safe with us.",
+                "pickupNote": {
+                  "title": "Pickup & Drop Available",
+                  "description": "We offer free pickup and drop within your city."
+                },
+                "fields": {
+                  "fullName": "Full Name",
+                  "phone": "Phone Number",
+                  "email": "Email Address",
+                  "deviceType": "Select Device Type",
+                  "brand": "Select Brand",
+                  "model": "Select Model",
+                  "issueType": "Select Issue Type",
+                  "issueDetails": "Describe the issue...",
+                  "preferredDate": "Preferred Date",
+                  "preferredTime": "Preferred Time"
+                },
+                "options": {
+                  "deviceTypes": ["Smartphone", "Tablet", "Smartwatch", "Laptop"],
+                  "brands": ["Apple", "Samsung", "OnePlus", "Xiaomi", "Vivo", "Oppo", "Realme", "Google", "Other"],
+                  "models": ["iPhone 15", "iPhone 14", "Galaxy S24", "Galaxy S23", "OnePlus 12", "Other"],
+                  "issueTypes": ["Screen Repair", "Battery Replacement", "Charging Port Repair", "Camera Repair", "Water Damage Repair", "Software Repair"],
+                  "times": ["10:00 AM", "11:00 AM", "12:00 PM", "02:00 PM", "04:00 PM", "06:00 PM"]
+                }
+              },
+              "process": {
+                "subtitle": "OUR PROCESS",
+                "title": "How It Works",
+                "steps": [
+                  { "number": "01", "icon": "ClipboardList", "title": "Book Repair", "description": "Fill the form and schedule your repair appointment." },
+                  { "number": "02", "icon": "Truck", "title": "Pickup Device", "description": "We pick up your device from your location safely." },
+                  { "number": "03", "icon": "Wrench", "title": "Repair Process", "description": "Our experts diagnose and repair your device with care." },
+                  { "number": "04", "icon": "ClipboardCheck", "title": "Quality Check", "description": "We test your device thoroughly to ensure perfect working." },
+                  { "number": "05", "icon": "Package", "title": "Safe Delivery", "description": "Your device is safely delivered back to your doorstep." }
+                ]
+              }
+            }
+          }
+        },
+        "Pricing": {
+          "variants": {
+            "RepairPricing": {
+              "subtitle": "OUR PRICING",
+              "titlePart1": "Mobile Repair",
+              "titleHighlight": "Costing",
+              "description": "Transparent pricing for all types of mobile repair services.\nNo hidden charges – Quality repairs at the best prices.",
+              "highlights": [
+                { "icon": "Tag", "title": "Transparent Pricing", "description": "No hidden charges" },
+                { "icon": "ShieldCheck", "title": "Quality Parts", "description": "Use of genuine parts" },
+                { "icon": "Clock", "title": "Quick Turnaround", "description": "Most repairs in 30-60 mins" },
+                { "icon": "Award", "title": "Warranty Included", "description": "Up to 90 Days Warranty" }
+              ],
+              "table": {
+                "headers": {
+                  "service": "REPAIR SERVICES",
+                  "description": "DESCRIPTION",
+                  "price": "STARTING PRICE"
+                },
+                "rows": [
+                  { "icon": "Smartphone", "iconBg": "#E8F3FF", "iconColor": "#3B82F6", "title": "Screen Replacement", "description": "Cracked or broken screen replacement\nwith high quality display.", "price": "$49" },
+                  { "icon": "BatteryCharging", "iconBg": "#E6F8EE", "iconColor": "#22A06B", "title": "Battery Replacement", "description": "Battery draining fast? Get a new\nhigh-performance battery.", "price": "$29" },
+                  { "icon": "Zap", "iconBg": "#FFF6D4", "iconColor": "#E0A800", "title": "Charging Port Repair", "description": "Charging port loose or not working?\nWe fix it quickly.", "price": "$39" },
+                  { "icon": "Droplets", "iconBg": "#E8EEFF", "iconColor": "#4F6BED", "title": "Water Damage Repair", "description": "Liquid damage? We clean and repair your\ndevice safely.", "price": "$59" },
+                  { "icon": "Camera", "iconBg": "#F3E8FF", "iconColor": "#8B5CF6", "title": "Camera Repair", "description": "Front or back camera not working?\nWe've got you covered.", "price": "$35" },
+                  { "icon": "Volume2", "iconBg": "#FDE8F0", "iconColor": "#E85A8A", "title": "Speaker / Mic Repair", "description": "No sound or unclear voice? We fix\nspeakers and microphone issues.", "price": "$29" },
+                  { "icon": "Smartphone", "iconBg": "#E8F6FF", "iconColor": "#38BDF8", "title": "Software / System Repair", "description": "Software glitches, hanging or updates\nissues – we fix all.", "price": "$25" },
+                  { "icon": "MessagesSquare", "iconBg": "#FFEDE4", "iconColor": "#F08A4B", "title": "Data Recovery", "description": "Lost your important data? We help\nrecover safely.", "price": "$49" }
+                ]
+              },
+              "popular": {
+                "title": "Most Popular Repairs",
+                "items": [
+                  { "icon": "Smartphone", "title": "Screen Replacement", "price": "$49", "duration": "1-2 Hours", "image": "/services/sp1.png" },
+                  { "icon": "BatteryCharging", "title": "Battery Replacement", "price": "$29", "duration": "30-60 Mins", "image": "/services/sp2.png" },
+                  { "icon": "Plug", "title": "Charging Port Repair", "price": "$39", "duration": "45-60 Mins", "image": "/services/sp3.png" },
+                  { "icon": "Droplets", "title": "Water Damage Repair", "price": "$59", "duration": "2-4 Hours", "image": "/services/sp5.png" },
+                  { "icon": "Camera", "title": "Camera Repair", "price": "$35", "duration": "45-60 Mins", "image": "/services/sp4.png" }
+                ]
+              }
+            }
+          }
+        },
+        "Gallery": {
+          "variants": {
+            "RepairGallery": {
+              "titlePart1": "Our",
+              "titleHighlight": "Gallery",
+              "description": "Take a look at our recent mobile repair work and\nbehind the scenes moments from our service center.",
+              "tabs": [
+                { "id": "photo", "label": "Photo Gallery", "icon": "Image" },
+                { "id": "video", "label": "Video Gallery", "icon": "CirclePlay" }
+              ],
+              "filters": [
+                { "id": "all", "label": "All" },
+                { "id": "screen", "label": "Screen Repair" },
+                { "id": "battery", "label": "Battery Replacement" },
+                { "id": "water", "label": "Water Damage" },
+                { "id": "charging", "label": "Charging Port" },
+                { "id": "others", "label": "Others" }
+              ],
+              "photos": [
+                { "src": "/gallery/screen-2.jpg", "alt": "Cracked phone screen", "category": "screen" },
+                { "src": "/gallery/battery-2.jpg", "alt": "Phone internals repair", "category": "battery" },
+                { "src": "/gallery/others-2.jpg", "alt": "Smartphone closeup", "category": "others" },
+                { "src": "/gallery/others-1.png", "alt": "Devices ready for repair", "category": "screen" },
+                { "src": "/gallery/others-3.jpg", "alt": "iPhone back camera", "category": "others" },
+                { "src": "/gallery/others-4.jpg", "alt": "Phone on table", "category": "others" },
+                { "src": "/gallery/screen-1.png", "alt": "Screen replacement", "category": "screen" },
+                { "src": "/gallery/battery-1.png", "alt": "Battery replacement", "category": "battery" },
+                { "src": "/gallery/charging-1.png", "alt": "Charging port repair", "category": "charging" },
+                { "src": "/gallery/water-1.png", "alt": "Water damage repair", "category": "water" },
+                { "src": "/gallery/camera-1.png", "alt": "Camera repair", "category": "others" },
+                { "src": "/gallery/workshop-1.png", "alt": "Repair workshop", "category": "others" }
+              ],
+              "videos": [
+                { "src": "/gallery/others-2.jpg", "alt": "Screen repair video", "category": "screen", "videoUrl": "/gallery/demo.mp4" },
+                { "src": "/gallery/battery-2.jpg", "alt": "Battery replacement video", "category": "battery", "videoUrl": "/gallery/demo.mp4" },
+                { "src": "/gallery/others-3.jpg", "alt": "Water damage video", "category": "water", "videoUrl": "/gallery/demo.mp4" },
+                { "src": "/gallery/charging-1.png", "alt": "Charging port video", "category": "charging", "videoUrl": "/gallery/demo.mp4" },
+                { "src": "/gallery/workshop-1.png", "alt": "Workshop video", "category": "others", "videoUrl": "/gallery/demo.mp4" },
+                { "src": "/gallery/others-4.jpg", "alt": "Repair process video", "category": "screen", "videoUrl": "/gallery/demo.mp4" }
+              ],
+              "cta": {
+                "title": "Need a Repair?",
+                "description": "We're here to fix your device quickly\nand with care.",
+                "phone": "+1 123 456 7890",
+                "buttonLabel": "Book a Repair",
+                "buttonLink": "/book"
+              }
+            }
+          }
+        },
+        "Testimonials": {
+          "variants": {
+            "RepairTestimonials": {
+              "subtitle": "TESTIMONIALS",
+              "titlePart1": "What Our",
+              "titleHighlight": "Customers Say",
+              "description": "We take pride in delivering top-quality mobile repair services.\nHere's what our customers have to say about their experience with Fixpro.",
+              "verifiedLabel": "Verified Customer",
+              "items": [
+                { "name": "Rahul Sharma", "city": "Delhi, India", "avatar": "/testimonails/1.png", "title": "Excellent Service!", "quote": "My phone screen was badly cracked. Fixaro replaced it within 30 minutes. The display quality is superb. Highly recommended!", "rating": 5 },
+                { "name": "Priya Mehta", "city": "Mumbai, India", "avatar": "/testimonails/2png.png", "title": "Quick & Reliable", "quote": "Battery was draining too fast. They replaced it with genuine battery. Now my phone works like new. Great experience!", "rating": 5 },
+                { "name": "Amit Verma", "city": "Bengaluru, India", "avatar": "/testimonails/3.png", "title": "Very Professional", "quote": "The team is professional and friendly. They explained the issue clearly and fixed it at a fair price. Will definitely visit again.", "rating": 5 },
+                { "name": "Neha Kapoor", "city": "Pune, India", "avatar": "/testimonails/4.png", "title": "Great Customer Support", "quote": "I had an issue with the charging port. They picked up my phone from my home and delivered it back after repair.", "rating": 5 },
+                { "name": "Vikram Singh", "city": "Lucknow, India", "avatar": "/testimonails/5.png", "title": "Affordable & Trusted", "quote": "Best service at the best price. No hidden charges and quality of work is excellent. My go-to place for any mobile repair.", "rating": 5 },
+                { "name": "Anjali Desai", "city": "Ahmedabad, India", "avatar": "/testimonails/6.png", "title": "Saved My Phone!", "quote": "My phone fell in water and stopped working. Fixaro fixed it perfectly. Thanks for saving my data and phone!", "rating": 5 }
+              ]
+            }
+          }
+        },
+        "Faq": {
+          "variants": {
+            "RepairFaq": {
+              "subtitle": "FAQS",
+              "titlePart1": "Frequently Asked",
+              "titleHighlight": "Questions",
+              "description": "Find answers to the most common questions about our mobile repair services, booking process, pricing, warranty and more.",
+              "groups": [
+                {
+                  "id": "repairs",
+                  "icon": "Wrench",
+                  "title": "Repairs & Services",
+                  "items": [
+                    { "question": "What types of phones do you repair?", "answer": "We repair all major brands including iPhone, Samsung, OnePlus, Xiaomi, Vivo, Oppo, Realme and more. Whether it's a screen replacement, battery issue, charging problem or software glitch – we've got you covered." },
+                    { "question": "Do you use original parts for repairs?", "answer": "Yes. We use genuine and high-quality replacement parts so your device looks and works like new after the repair." },
+                    { "question": "How long does a typical repair take?", "answer": "Most common repairs such as screen and battery replacement are completed in 30–60 minutes. Complex issues may take longer, and we will inform you in advance." },
+                    { "question": "Can you fix water-damaged phones?", "answer": "Yes, we handle water-damage diagnosis and repair. Bring the device as soon as possible and avoid charging it until our technicians check it." },
+                    { "question": "What if my phone issue is not listed in your services?", "answer": "Contact us with your device model and issue. If it can be repaired, our team will guide you with the right solution and estimate." }
+                  ]
+                },
+                {
+                  "id": "booking",
+                  "icon": "ClipboardList",
+                  "title": "Booking & Process",
+                  "items": [
+                    { "question": "How can I book a repair?", "answer": "You can book a repair through our \"Book a Repair\" page by filling out the form. You can also call or visit our service center directly." },
+                    { "question": "Can I walk in without an appointment?", "answer": "Yes, walk-ins are welcome. Appointments are recommended during peak hours so we can serve you faster." },
+                    { "question": "Do you offer pickup and drop service?", "answer": "Yes, we offer pickup and drop for eligible locations. Share your address while booking and our team will confirm the slot." },
+                    { "question": "How will I know the status of my repair?", "answer": "We update you by phone or WhatsApp at every key step — from diagnosis to quality check and delivery." }
+                  ]
+                },
+                {
+                  "id": "payments",
+                  "icon": "CircleDollarSign",
+                  "title": "Payments & Pricing",
+                  "items": [
+                    { "question": "How much will the repair cost?", "answer": "Repair costs depend on the type of device and issue. You can get an estimate on the repair cost page or contact our support team for a quick quote." },
+                    { "question": "Do you provide a bill for the repair?", "answer": "Yes, you receive a proper invoice for every repair, including parts and service details." },
+                    { "question": "What payment methods do you accept?", "answer": "We accept cash, UPI, debit/credit cards and other common digital payments." },
+                    { "question": "Are there any extra charges for pickup and delivery?", "answer": "Pickup and delivery charges may apply based on your location. We confirm any extra fee before we proceed." }
+                  ]
+                },
+                {
+                  "id": "warranty",
+                  "icon": "Shield",
+                  "title": "Warranty & Returns",
+                  "items": [
+                    { "question": "Do you provide warranty on repairs?", "answer": "Yes, we provide up to 90 days warranty on most repairs. Warranty terms may vary based on the service." },
+                    { "question": "What if the issue comes back after repair?", "answer": "Bring the device back within the warranty period. We will inspect it and fix covered issues at no extra repair charge." },
+                    { "question": "Can I get a refund if I'm not satisfied with the repair?", "answer": "If you are not satisfied, contact us and we will review the case. Refunds depend on the service type, parts used and warranty terms." }
+                  ]
+                },
+                {
+                  "id": "care",
+                  "icon": "Lightbulb",
+                  "title": "Device Care Tips",
+                  "items": [
+                    { "question": "How can I extend my phone's battery life?", "answer": "Avoid overcharging, keep your software updated, reduce screen brightness and close unused apps. These simple steps can help extend battery life." },
+                    { "question": "How can I protect my phone screen?", "answer": "Use a tempered glass protector and a sturdy case. Avoid keeping the phone loose with keys or coins." },
+                    { "question": "What should I do if my phone gets wet?", "answer": "Power it off immediately, do not charge it, and do not use a hair dryer. Bring it to us as soon as possible for inspection." },
+                    { "question": "How often should I clean my phone?", "answer": "Wipe the screen and body weekly with a soft dry cloth. Avoid liquids in charging ports and speaker grills." }
+                  ]
+                }
+              ]
             }
           }
         }
@@ -591,6 +2037,110 @@
               "components": [
                 { "key": "Breadcrumb", "component": "RepairBreadcrumbTeamDetail" },
                 { "key": "TeamDetail", "component": "RepairTeamDetail" }
+              ]
+            },
+            "brands-we-repair": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbBrandsWeRepair" },
+                { "key": "BrandsWeRepair", "component": "RepairBrandsWeRepair" }
+              ]
+            },
+            "services": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbServices" },
+                { "key": "Services", "component": "RepairServicesPage" }
+              ]
+            },
+            "service-detail": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbServiceDetail" },
+                { "key": "ServiceDetail", "component": "RepairServiceDetail" }
+              ]
+            },
+            "book": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbBook" },
+                { "key": "BookRepair", "component": "RepairBookRepair" }
+              ]
+            },
+            "pricing": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbPricing" },
+                { "key": "Pricing", "component": "RepairPricing" }
+              ]
+            },
+            "gallery": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbGallery" },
+                { "key": "Gallery", "component": "RepairGallery" }
+              ]
+            },
+            "testimonials": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbTestimonials" },
+                { "key": "Testimonials", "component": "RepairTestimonials" }
+              ]
+            },
+            "faq": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbFaq" },
+                { "key": "Faq", "component": "RepairFaq" }
+              ]
+            },
+            "blog": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbBlog" },
+                { "key": "Blog", "component": "RepairBlogPage" }
+              ]
+            },
+            "blog-detail": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbBlogDetail" },
+                { "key": "BlogDetail", "component": "RepairBlogDetail" }
+              ]
+            },
+            "contact": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbContact" },
+                { "key": "Contact", "component": "RepairContact" }
+              ]
+            },
+            "career": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbCareer" },
+                { "key": "Career", "component": "RepairCareer" },
+                { "key": "Team", "component": "RepairTeam" }
+              ]
+            },
+            "career-detail": {
+              "components": [
+                { "key": "Breadcrumb", "component": "RepairBreadcrumbCareerDetail" },
+                { "key": "CareerDetail", "component": "RepairCareerDetail" }
+              ]
+            },
+            "warranty-policy": {
+              "components": [
+                { "key": "Policy", "component": "RepairPolicy" }
+              ]
+            },
+            "refund-policy": {
+              "components": [
+                { "key": "Policy", "component": "RepairPolicy" }
+              ]
+            },
+            "privacy": {
+              "components": [
+                { "key": "Policy", "component": "RepairPolicy" }
+              ]
+            },
+            "terms": {
+              "components": [
+                { "key": "Policy", "component": "RepairPolicy" }
+              ]
+            },
+            "sitemap": {
+              "components": [
+                { "key": "Sitemap", "component": "RepairSitemap" }
               ]
             }
           }

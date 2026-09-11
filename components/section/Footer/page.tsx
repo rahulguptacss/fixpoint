@@ -203,9 +203,12 @@ export default function Footer({ data }: { data: FooterData }) {
         {/* Copyright */}
         <div className="py-3 border-t border-[#1e3450] text-center md:flex md:justify-between md:text-left">
           <p className="text-[#A0AABF] text-[14px]">{data.copyright}</p>
-          <div className="mt-4 md:mt-0 text-[14px] text-[#A0AABF] space-x-6">
+          <div className="mt-4 md:mt-0 text-[14px] text-[#A0AABF] flex flex-wrap justify-center md:justify-end gap-x-5 gap-y-2">
+            <Link href="/warranty-policy" className="hover:text-white transition-colors">Warranty Policy</Link>
+            <Link href="/refund-policy" className="hover:text-white transition-colors">Cancellation / Refund Policy</Link>
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
+            <Link href="/sitemap" className="hover:text-white transition-colors">Sitemap</Link>
           </div>
         </div>
 

@@ -23,6 +23,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+export const dynamic = "force-dynamic";
+
+
+
 export const metadata: Metadata = {
   title: "FixPoint - Mobile Repair Services",
   description: "Fast, reliable, and professional mobile repair services.",

@@ -23,7 +23,7 @@ export default function Breadcrumb({ data }: { data: BreadcrumbData }) {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-center">
           {/* Breadcrumb Links */}
-          <div className="flex items-center text-[15px] font-medium mb-4">
+          <div className="flex flex-wrap items-center text-[13px] sm:text-[15px] font-medium mb-3 sm:mb-4">
             <span className="w-6 h-[2px] bg-[#FF8A00] mr-3"></span>
             {data.paths.map((path, index) => {
               const isLast = index === data.paths.length - 1;
@@ -45,7 +45,7 @@ export default function Breadcrumb({ data }: { data: BreadcrumbData }) {
           </div>
           
           {/* Title */}
-          <h1 className="text-white text-4xl md:text-5xl lg:text-[54px] font-bold tracking-tight">
+          <h1 className="text-white text-[28px] sm:text-4xl md:text-5xl lg:text-[54px] font-bold tracking-tight">
             {data.title}
           </h1>
         </div>

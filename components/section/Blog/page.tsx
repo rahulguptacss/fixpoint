@@ -67,7 +67,7 @@ export default function Blog({ data }: { data: BlogData }) {
           ))}
         </div>
         
-        {/* View All Button */}
+        {!data.hideViewAll && (
         <div className="mt-8 text-center">
           <Link 
             href="/blog" 
@@ -77,6 +77,7 @@ export default function Blog({ data }: { data: BlogData }) {
             {data.viewAllButtonText || "View All Blogs"}
           </Link>
         </div>
+        )}
         
       </div>
     </section>
