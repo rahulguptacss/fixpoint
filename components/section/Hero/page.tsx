@@ -21,11 +21,6 @@ export default function Hero({ data }: { data: HeroData }) {
           from { opacity: 0; transform: translateY(30px); }
           to { opacity: 1; transform: translateY(0); }
         }
-        @keyframes pulseRing {
-          0% { transform: scale(1); opacity: 0.8; }
-          50% { transform: scale(1.3); opacity: 0; }
-          100% { transform: scale(1); opacity: 0; }
-        }
         .animate-fade-in-up {
           opacity: 0;
           animation: fadeInUp 0.8s ease-out forwards;
@@ -33,24 +28,6 @@ export default function Hero({ data }: { data: HeroData }) {
         .delay-100 { animation-delay: 0.1s; }
         .delay-200 { animation-delay: 0.2s; }
         .delay-300 { animation-delay: 0.3s; }
-        .delay-400 { animation-delay: 0.4s; }
-        .pulse-ring::before {
-          content: '';
-          position: absolute;
-          inset: -20px;
-          border-radius: 50%;
-          background: rgba(255, 255, 255, 0.2);
-          animation: pulseRing 2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-        }
-        .pulse-ring::after {
-          content: '';
-          position: absolute;
-          inset: -40px;
-          border-radius: 50%;
-          background: rgba(255, 255, 255, 0.1);
-          animation: pulseRing 2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-          animation-delay: 0.5s;
-        }
       `}} />
 
       {/* Background Image Overlay */}
@@ -104,16 +81,6 @@ export default function Hero({ data }: { data: HeroData }) {
               </div>
               {data.buttonSecondary.label}
             </button>
-          </div>
-        </div>
-
-        {/* Right Content - Play Button */}
-        <div className="hidden md:flex w-[40%] lg:w-[50%] justify-center animate-fade-in-up delay-400">
-          <div className="relative cursor-pointer group" onClick={() => setIsVideoOpen(true)}>
-            <div className="pulse-ring absolute inset-0 rounded-full"></div>
-            <div className="relative bg-white w-24 h-24 rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(0,0,0,0.3)] transition-transform duration-300 group-hover:scale-110 z-10">
-              <LucideIcons.Play className="w-10 h-10 text-[#1877F2] ml-1 fill-[#1877F2]" />
-            </div>
           </div>
         </div>
         

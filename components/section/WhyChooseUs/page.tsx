@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import { WhyChooseUsData } from '../../types';
-import { CheckCircle2, Play } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function WhyChooseUs({ data }: { data: WhyChooseUsData }) {
@@ -54,20 +54,6 @@ export default function WhyChooseUs({ data }: { data: WhyChooseUsData }) {
                 className="w-full h-auto object-cover md:h-[600px] transition-transform duration-700 group-hover:scale-105"
               />
             </div>
-            
-            {/* Play Button Overlay */}
-            <motion.div 
-              className="absolute top-1/2 -right-8 transform -translate-y-1/2 z-20 hidden md:block"
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4, duration: 0.5, type: "spring" }}
-              viewport={{ once: true }}
-            >
-              <a href={data.videoLink} className="flex items-center justify-center w-20 h-20 bg-[#1877F2] text-white rounded shadow-xl hover:bg-blue-600 transition-colors">
-                <Play className="w-8 h-8 fill-current" />
-              </a>
-              <div className="absolute inset-0 bg-[#1877F2]/10 -z-10 transform translate-x-4 -translate-y-4 rounded w-24 h-24 animate-pulse"></div>
-            </motion.div>
 
             {/* Dark Card Overlay */}
             <motion.div 
