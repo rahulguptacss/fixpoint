@@ -29,7 +29,7 @@ export default function Services({ data }: { data: ServicesData }) {
   return (
     <section 
       ref={sectionRef} 
-      className="pt-10 pb-24 bg-[#F8FBFF] overflow-hidden" 
+      className="pt-10 pb-12 bg-[#F8FBFF] overflow-hidden" 
       style={{ fontFamily: 'var(--font-inter), sans-serif' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,9 +76,9 @@ export default function Services({ data }: { data: ServicesData }) {
             
             return (
               <Link
-                href={`/services/${item.slug || item.id}`}
+                href={`/services/${item.slug || "screen-repair"}`}
                 key={item.id}
-                className={`block bg-white rounded-[32px] overflow-visible shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_16px_40px_rgb(0,0,0,0.14)] transition-all duration-500 group transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                className={`block cursor-pointer bg-white rounded-[32px] overflow-visible shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_16px_40px_rgb(0,0,0,0.14)] transition-all duration-500 group transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 {/* Image Section */}
@@ -99,11 +99,11 @@ export default function Services({ data }: { data: ServicesData }) {
                 </div>
                 
                 {/* Text Content */}
-                <div className="pt-16 px-6 lg:px-8 pb-10 text-center">
+                <div className="pt-12 px-6 lg:px-8 pb-6 text-center">
                   <h3 className="text-[20px] lg:text-[22px] font-bold text-[#021731] transition-colors duration-300 group-hover:text-[#1877F2]">
                     {item.title}
                   </h3>
-                  <div className={`w-8 h-[3px] mx-auto mt-3 mb-4 rounded-full ${bgColor} transition-all duration-300 group-hover:w-16`}></div>
+                  <div className={`w-8 h-[3px] mx-auto mt-1.5 mb-2 rounded-full ${bgColor} transition-all duration-300 group-hover:w-16`}></div>
                   <p className="text-[#4A5568] text-[14px] lg:text-[15px] leading-relaxed">
                     {item.description}
                   </p>
