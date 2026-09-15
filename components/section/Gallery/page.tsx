@@ -26,12 +26,18 @@ function isGalleryVideo(item: GalleryItem): item is GalleryVideo {
 export default function Gallery({ data }: { data: GalleryData }) {
   const [tab, setTab] = useState<"photo" | "video">("photo");
   const [filter, setFilter] = useState("all");
+  const [activePhoto, setActivePhoto] = useState<{ src: string; alt: string } | null>(null);
   const [activeVideo, setActiveVideo] = useState<{ src: string; alt: string } | null>(null);
 
+  const lightboxOpen = Boolean(activePhoto || activeVideo);
+
   useEffect(() => {
-    if (!activeVideo) return;
+    if (!lightboxOpen) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setActiveVideo(null);
+      if (e.key === "Escape") {
+        setActivePhoto(null);
+        setActiveVideo(null);
+      }
     };
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", onKey);
@@ -39,7 +45,7 @@ export default function Gallery({ data }: { data: GalleryData }) {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", onKey);
     };
-  }, [activeVideo]);
+  }, [lightboxOpen]);
 
   const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -179,11 +185,22 @@ export default function Gallery({ data }: { data: GalleryData }) {
             {items.map((item, index) => (
               <motion.div
                 key={`${item.src}-${index}`}
-                className="relative mb-3 sm:mb-4 break-inside-avoid overflow-hidden rounded-[12px] sm:rounded-[14px] group"
+                className={`relative mb-3 sm:mb-4 break-inside-avoid overflow-hidden rounded-[12px] sm:rounded-[14px] group ${tab === "photo" ? "cursor-pointer" : ""}`}
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: index * 0.05, ease }}
                 whileHover={{ y: -4 }}
+                onClick={() => {
+                  if (tab === "photo") setActivePhoto({ src: item.src, alt: item.alt });
+                }}
+                role={tab === "photo" ? "button" : undefined}
+                tabIndex={tab === "photo" ? 0 : undefined}
+                onKeyDown={(e) => {
+                  if (tab === "photo" && (e.key === "Enter" || e.key === " ")) {
+                    e.preventDefault();
+                    setActivePhoto({ src: item.src, alt: item.alt });
+                  }
+                }}
               >
                 <motion.img
                   src={item.src}
@@ -265,6 +282,41 @@ export default function Gallery({ data }: { data: GalleryData }) {
           </div>
         </motion.div>
       </div>
+
+      <AnimatePresence>
+        {activePhoto && (
+          <motion.div
+            className="fixed inset-0 z-[80] bg-black/80 backdrop-blur-[2px] flex items-center justify-center p-3 sm:p-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setActivePhoto(null)}
+          >
+            <motion.div
+              className="relative max-w-[92vw] max-h-[88vh]"
+              initial={{ scale: 0.92, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.96, opacity: 0 }}
+              transition={{ duration: 0.28, ease }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                type="button"
+                onClick={() => setActivePhoto(null)}
+                className="absolute -top-3 -right-3 sm:top-2.5 sm:right-2.5 z-10 w-9 h-9 rounded-full bg-white text-[#06194B] flex items-center justify-center shadow-lg"
+                aria-label="Close photo"
+              >
+                <LucideIcons.X className="w-5 h-5" />
+              </button>
+              <img
+                src={activePhoto.src}
+                alt={activePhoto.alt}
+                className="max-w-[92vw] max-h-[88vh] w-auto h-auto object-contain rounded-xl sm:rounded-2xl shadow-2xl"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <AnimatePresence>
         {activeVideo && (

@@ -330,9 +330,9 @@ export default function BookRepair({
                   FEATURES + PHONE IMAGE
               ================================================= */}
 
-              <div className="w-full max-w-[420px]">
+              <div className="relative w-full">
 
-                <motion.div variants={stagger} className="w-full">
+                <motion.div variants={stagger} className="w-full max-w-[420px]">
 
                   {intro.features.map(
                     (feature, index) => {
@@ -395,6 +395,34 @@ export default function BookRepair({
                   )}
 
                 </motion.div>
+
+                {intro.image && (
+                  <>
+                    <div
+                      className="
+                        pointer-events-none
+                        absolute
+                        right-0
+                        bottom-[-12px]
+                        hidden
+                        md:block
+                        w-[min(52%,380px)]
+                        xl:w-[min(55%,420px)]
+                      "
+                    >
+                      <img
+                        src={intro.image}
+                        alt="Book a repair"
+                        className="w-full h-auto object-contain drop-shadow-xl"
+                      />
+                    </div>
+                    <img
+                      src={intro.image}
+                      alt="Book a repair"
+                      className="mt-6 w-full max-w-[320px] mx-auto h-auto object-contain md:hidden"
+                    />
+                  </>
+                )}
 
               </div>
 

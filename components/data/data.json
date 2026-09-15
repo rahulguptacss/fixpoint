@@ -898,6 +898,33 @@
                   "date": "May 10, 2024",
                   "category": "Services",
                   "link": "/blog/why-professional"
+                },
+                {
+                  "id": 7,
+                  "title": "6 Signs Your Phone Battery Needs Replacement",
+                  "description": "Know the top signs that indicate your phone battery needs a replacement.",
+                  "image": "/blog/b1.png",
+                  "date": "May 05, 2024",
+                  "category": "Maintenance",
+                  "link": "/blog/battery-replacement"
+                },
+                {
+                  "id": 8,
+                  "title": "How to Protect Your Phone from Water Damage",
+                  "description": "Simple tips to protect your phone from water damage and other liquids.",
+                  "image": "/blog/b2.png",
+                  "date": "Apr 28, 2024",
+                  "category": "Tips",
+                  "link": "/blog/water-damage"
+                },
+                {
+                  "id": 9,
+                  "title": "Why Choose Professional Mobile Repair Services?",
+                  "description": "Top reasons why professional repair is better than DIY solutions.",
+                  "image": "/blog/b3.png",
+                  "date": "Apr 22, 2024",
+                  "category": "Services",
+                  "link": "/blog/why-professional"
                 }
               ]
             }
@@ -1927,7 +1954,10 @@
                 { "name": "Amit Verma", "city": "Bengaluru, India", "avatar": "/testimonails/3.png", "title": "Very Professional", "quote": "The team is professional and friendly. They explained the issue clearly and fixed it at a fair price. Will definitely visit again.", "rating": 5 },
                 { "name": "Neha Kapoor", "city": "Pune, India", "avatar": "/testimonails/4.png", "title": "Great Customer Support", "quote": "I had an issue with the charging port. They picked up my phone from my home and delivered it back after repair.", "rating": 5 },
                 { "name": "Vikram Singh", "city": "Lucknow, India", "avatar": "/testimonails/5.png", "title": "Affordable & Trusted", "quote": "Best service at the best price. No hidden charges and quality of work is excellent. My go-to place for any mobile repair.", "rating": 5 },
-                { "name": "Anjali Desai", "city": "Ahmedabad, India", "avatar": "/testimonails/6.png", "title": "Saved My Phone!", "quote": "My phone fell in water and stopped working. Fixaro fixed it perfectly. Thanks for saving my data and phone!", "rating": 5 }
+                { "name": "Anjali Desai", "city": "Ahmedabad, India", "avatar": "/testimonails/6.png", "title": "Saved My Phone!", "quote": "My phone fell in water and stopped working. Fixaro fixed it perfectly. Thanks for saving my data and phone!", "rating": 5 },
+                { "name": "Karan Malhotra", "city": "Chandigarh, India", "avatar": "/testimonails/1.png", "title": "Same-Day Repair", "quote": "Camera was blurry after a drop. They diagnosed and replaced it the same day. Phone looks and works like new again.", "rating": 5 },
+                { "name": "Sneha Iyer", "city": "Hyderabad, India", "avatar": "/testimonails/2png.png", "title": "Honest Advice", "quote": "They didn't upsell extra parts. Explained exactly what was needed and completed the software fix quickly. Very trustworthy.", "rating": 5 },
+                { "name": "Rohit Nair", "city": "Kochi, India", "avatar": "/testimonails/3.png", "title": "Smooth Pickup", "quote": "Booked online, pickup was on time, and I got regular updates until delivery. Easy process from start to finish.", "rating": 5 }
               ]
             }
           }

@@ -94,13 +94,6 @@ export default function Career({ data }: { data: CareerData }) {
               <p className="mt-3 text-[#7A8494] text-[14px] sm:text-[16px] leading-[1.7] max-w-[420px] xl:max-w-[340px]">
                 {openings.description}
               </p>
-              <Link
-                href={openings.buttonLink}
-                className="mt-6 inline-flex items-center justify-center gap-2 bg-[#0B1B4D] hover:bg-[#15285A] text-white font-semibold text-[14px] px-5 sm:px-6 py-3 rounded-[6px] transition-colors w-full sm:w-auto"
-              >
-                {openings.buttonLabel}
-                <ArrowRight className="w-4 h-4" />
-              </Link>
             </motion.div>
 
             <div className="flex flex-col gap-4 xl:gap-0 xl:bg-white xl:rounded-[22px] xl:px-5 xl:py-3 xl:shadow-[0_12px_32px_rgba(15,40,80,0.06)]">

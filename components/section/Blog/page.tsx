@@ -1,9 +1,34 @@
-import React from 'react';
+"use client";
+
+import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
-import { Calendar, ArrowRight, LayoutGrid } from 'lucide-react';
+import { Calendar, ArrowRight, LayoutGrid, ChevronLeft, ChevronRight } from 'lucide-react';
 import { BlogData } from '../../types';
 
+const PAGE_SIZE = 6;
+
 export default function Blog({ data }: { data: BlogData }) {
+  const [page, setPage] = useState(1);
+  const showPagination = Boolean(data.hideViewAll);
+
+  const totalPages = Math.max(1, Math.ceil(data.items.length / PAGE_SIZE));
+  const currentPage = Math.min(page, totalPages);
+
+  const pagedItems = useMemo(() => {
+    if (!showPagination) return data.items;
+    const start = (currentPage - 1) * PAGE_SIZE;
+    return data.items.slice(start, start + PAGE_SIZE);
+  }, [data.items, currentPage, showPagination]);
+
+  const goToPage = (next: number) => {
+    const clamped = Math.min(Math.max(next, 1), totalPages);
+    setPage(clamped);
+    document.getElementById("blog-list")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <section className="pt-12 pb-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,8 +53,8 @@ export default function Blog({ data }: { data: BlogData }) {
         </div>
         
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {data.items.map((post) => (
+        <div id="blog-list" className="grid grid-cols-1 md:grid-cols-3 gap-5 scroll-mt-24">
+          {pagedItems.map((post) => (
             <div key={post.id} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group relative flex flex-col">
               <div className="h-56 overflow-hidden relative">
                 <img 
@@ -77,6 +102,52 @@ export default function Blog({ data }: { data: BlogData }) {
             {data.viewAllButtonText || "View All Blogs"}
           </Link>
         </div>
+        )}
+
+        {showPagination && totalPages > 1 && (
+          <nav
+            className="mt-10 flex items-center justify-center gap-2 sm:gap-2.5"
+            aria-label="Blog pagination"
+          >
+            <button
+              type="button"
+              onClick={() => goToPage(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-[10px] border border-[#E3E9F2] bg-white text-[#06194B] flex items-center justify-center disabled:opacity-35 disabled:cursor-not-allowed hover:border-[#06194B] transition-colors"
+              aria-label="Previous page"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => {
+              const active = num === currentPage;
+              return (
+                <button
+                  key={num}
+                  type="button"
+                  onClick={() => goToPage(num)}
+                  className={`min-w-10 h-10 sm:min-w-11 sm:h-11 px-3 rounded-[10px] text-[14px] sm:text-[15px] font-bold transition-colors ${
+                    active
+                      ? "bg-[#06194B] text-white"
+                      : "bg-white border border-[#E3E9F2] text-[#06194B] hover:border-[#06194B]"
+                  }`}
+                  aria-current={active ? "page" : undefined}
+                >
+                  {num}
+                </button>
+              );
+            })}
+
+            <button
+              type="button"
+              onClick={() => goToPage(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-[10px] border border-[#E3E9F2] bg-white text-[#06194B] flex items-center justify-center disabled:opacity-35 disabled:cursor-not-allowed hover:border-[#06194B] transition-colors"
+              aria-label="Next page"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </nav>
         )}
         
       </div>

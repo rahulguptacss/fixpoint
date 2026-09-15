@@ -1,11 +1,32 @@
 "use client";
 
-import React from "react";
+import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { TestimonialsData } from "../../types";
 
+const PAGE_SIZE = 6;
+
 export default function Testimonials({ data }: { data: TestimonialsData }) {
+  const [page, setPage] = useState(1);
+
+  const totalPages = Math.max(1, Math.ceil(data.items.length / PAGE_SIZE));
+  const currentPage = Math.min(page, totalPages);
+
+  const pagedItems = useMemo(() => {
+    const start = (currentPage - 1) * PAGE_SIZE;
+    return data.items.slice(start, start + PAGE_SIZE);
+  }, [data.items, currentPage]);
+
+  const goToPage = (next: number) => {
+    const clamped = Math.min(Math.max(next, 1), totalPages);
+    setPage(clamped);
+    document.getElementById("testimonials-list")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   const ease = [0.22, 1, 0.36, 1] as const;
 
   const fadeUp = {
@@ -58,13 +79,14 @@ export default function Testimonials({ data }: { data: TestimonialsData }) {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5 md:gap-6"
+          id="testimonials-list"
+          key={currentPage}
+          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5 md:gap-6 scroll-mt-24"
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.12 }}
+          animate="visible"
           variants={stagger}
         >
-          {data.items.map((item) => (
+          {pagedItems.map((item) => (
             <motion.article
               key={item.name}
               variants={card}
@@ -137,6 +159,52 @@ export default function Testimonials({ data }: { data: TestimonialsData }) {
             </motion.article>
           ))}
         </motion.div>
+
+        {totalPages > 1 && (
+          <nav
+            className="mt-8 sm:mt-10 flex items-center justify-center gap-2 sm:gap-2.5"
+            aria-label="Testimonials pagination"
+          >
+            <button
+              type="button"
+              onClick={() => goToPage(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-[10px] border border-[#E3E9F2] text-[#06194B] flex items-center justify-center disabled:opacity-35 disabled:cursor-not-allowed hover:border-[#06194B] transition-colors"
+              aria-label="Previous page"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => {
+              const active = num === currentPage;
+              return (
+                <button
+                  key={num}
+                  type="button"
+                  onClick={() => goToPage(num)}
+                  className={`min-w-10 h-10 sm:min-w-11 sm:h-11 px-3 rounded-[10px] text-[14px] sm:text-[15px] font-bold transition-colors ${
+                    active
+                      ? "bg-[#06194B] text-white"
+                      : "border border-[#E3E9F2] text-[#06194B] hover:border-[#06194B]"
+                  }`}
+                  aria-current={active ? "page" : undefined}
+                >
+                  {num}
+                </button>
+              );
+            })}
+
+            <button
+              type="button"
+              onClick={() => goToPage(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-[10px] border border-[#E3E9F2] text-[#06194B] flex items-center justify-center disabled:opacity-35 disabled:cursor-not-allowed hover:border-[#06194B] transition-colors"
+              aria-label="Next page"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </nav>
+        )}
       </div>
     </section>
   );
