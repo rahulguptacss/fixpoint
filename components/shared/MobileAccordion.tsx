@@ -18,8 +18,10 @@ export default function MobileAccordion({
   return (
     <div className={`md:hidden border-t border-[#1e3450] ${isLast ? 'border-b mb-6' : ''}`}>
       <button 
+        type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center py-4 font-bold text-white text-[16px]"
+        aria-expanded={isOpen}
+        className="w-full flex justify-between items-center py-4 font-bold text-white text-[16px] min-h-11"
       >
         {title}
         <ChevronDown className={`w-5 h-5 text-[#A0AABF] transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#1877F2]' : ''}`} />

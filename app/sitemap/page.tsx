@@ -18,7 +18,7 @@ export default async function SitemapPage() {
       { label: "Home", url: "/" },
       { label: "Sitemap", url: "/sitemap" },
     ],
-    bgImage: "/img/footerbg.png",
+    bgImage: "/img/footerbg.jpg",
   };
 
   return (

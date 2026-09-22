@@ -198,9 +198,9 @@
               "experienceYears": "10+",
               "experienceText": "Years of Experience",
               "images": [
-                "/about/a1.png",
-                "/about/a2.png",
-                "/about/a3.png"
+                "/about/a1.jpg",
+                "/about/a2.jpg",
+                "/about/a3.jpg"
               ]
             }
           }
@@ -220,7 +220,7 @@
                   "title": "Screen Repair",
                   "description": "Fast and reliable screen replacement with high quality parts, returned to look brand new.",
                   "icon": "Smartphone",
-                  "image": "/services/s1.png",
+                  "image": "/services/s1.jpg",
                   "slug": "screen-repair"
                 },
                 {
@@ -228,7 +228,7 @@
                   "title": "Battery Replacement",
                   "description": "Professional battery replacements to keep the power running in your device.",
                   "icon": "Battery",
-                  "image": "/services/s2.png",
+                  "image": "/services/s2.jpg",
                   "slug": "battery-replacement"
                 },
                 {
@@ -236,7 +236,7 @@
                   "title": "Software Repair",
                   "description": "Expert software diagnostics and troubleshooting to ensure your device is performing optimally.",
                   "icon": "Cpu",
-                  "image": "/services/s3.png",
+                  "image": "/services/s3.jpg",
                   "slug": "software-repair"
                 }
               ]
@@ -496,7 +496,7 @@
                   "id": 1,
                   "name": "Alex Johnson",
                   "role": "Mobile Repair Specialist",
-                  "image": "/team/t1.png",
+                  "image": "/team/t1.jpg",
                   "socials": [
                     { "platform": "facebook", "url": "https://www.facebook.com/" },
                     { "platform": "instagram", "url": "https://www.instagram.com/" },
@@ -508,7 +508,7 @@
                   "id": 2,
                   "name": "Ryan Mitchell",
                   "role": "Chief Lead Technician",
-                  "image": "/team/t2.png",
+                  "image": "/team/t2.jpg",
                   "socials": [
                     { "platform": "facebook", "url": "https://www.facebook.com/" },
                     { "platform": "instagram", "url": "https://www.instagram.com/" },
@@ -520,7 +520,7 @@
                   "id": 3,
                   "name": "James Carter",
                   "role": "Hardware Repair Expert",
-                  "image": "/team/t3.png",
+                  "image": "/team/t3.jpg",
                   "socials": [
                     { "platform": "facebook", "url": "https://www.facebook.com/" },
                     { "platform": "instagram", "url": "https://www.instagram.com/" },
@@ -532,7 +532,7 @@
                   "id": 4,
                   "name": "Daniel Roberts",
                   "role": "Software Repair Engineer",
-                  "image": "/team/t4.png",
+                  "image": "/team/t4.jpg",
                   "socials": [
                     { "platform": "facebook", "url": "https://www.facebook.com/" },
                     { "platform": "instagram", "url": "https://www.instagram.com/" },
@@ -551,7 +551,7 @@
                   "id": 1,
                   "name": "Alex Johnson",
                   "role": "Mobile Repair Specialist",
-                  "image": "/team/t1.png",
+                  "image": "/team/t1.jpg",
                   "socials": [
                     { "platform": "facebook", "url": "https://www.facebook.com/" },
                     { "platform": "instagram", "url": "https://www.instagram.com/" },
@@ -563,7 +563,7 @@
                   "id": 2,
                   "name": "Ryan Mitchell",
                   "role": "Chief Lead Technician",
-                  "image": "/team/t2.png",
+                  "image": "/team/t2.jpg",
                   "socials": [
                     { "platform": "facebook", "url": "https://www.facebook.com/" },
                     { "platform": "instagram", "url": "https://www.instagram.com/" },
@@ -575,7 +575,7 @@
                   "id": 3,
                   "name": "James Carter",
                   "role": "Hardware Repair Expert",
-                  "image": "/team/t3.png",
+                  "image": "/team/t3.jpg",
                   "socials": [
                     { "platform": "facebook", "url": "https://www.facebook.com/" },
                     { "platform": "instagram", "url": "https://www.instagram.com/" },
@@ -587,7 +587,7 @@
                   "id": 4,
                   "name": "Daniel Roberts",
                   "role": "Software Repair Engineer",
-                  "image": "/team/t4.png",
+                  "image": "/team/t4.jpg",
                   "socials": [
                     { "platform": "facebook", "url": "https://www.facebook.com/" },
                     { "platform": "instagram", "url": "https://www.instagram.com/" },
@@ -599,7 +599,7 @@
                   "id": 5,
                   "name": "Alex Johnson",
                   "role": "Mobile Repair Specialist",
-                  "image": "/team/t1.png",
+                  "image": "/team/t1.jpg",
                   "socials": [
                     { "platform": "facebook", "url": "https://www.facebook.com/" },
                     { "platform": "instagram", "url": "https://www.instagram.com/" },
@@ -611,7 +611,7 @@
                   "id": 6,
                   "name": "Ryan Mitchell",
                   "role": "Chief Lead Technician",
-                  "image": "/team/t2.png",
+                  "image": "/team/t2.jpg",
                   "socials": [
                     { "platform": "facebook", "url": "https://www.facebook.com/" },
                     { "platform": "instagram", "url": "https://www.instagram.com/" },
@@ -623,7 +623,7 @@
                   "id": 7,
                   "name": "James Carter",
                   "role": "Hardware Repair Expert",
-                  "image": "/team/t3.png",
+                  "image": "/team/t3.jpg",
                   "socials": [
                     { "platform": "facebook", "url": "https://www.facebook.com/" },
                     { "platform": "instagram", "url": "https://www.instagram.com/" },
@@ -635,7 +635,7 @@
                   "id": 8,
                   "name": "Daniel Roberts",
                   "role": "Software Repair Engineer",
-                  "image": "/team/t4.png",
+                  "image": "/team/t4.jpg",
                   "socials": [
                     { "platform": "facebook", "url": "https://www.facebook.com/" },
                     { "platform": "instagram", "url": "https://www.instagram.com/" },
@@ -652,7 +652,7 @@
             "RepairTeamDetail": {
               "name": "Rohit Sharma",
               "role": "SENIOR TECHNICIAN",
-              "image": "/team/t1.png",
+              "image": "/team/t1.jpg",
               "description": "Rohit Sharma is a skilled mobile repair expert with over 6 years of experience in diagnosing and fixing a wide range of smartphone and tablet issues. He specializes in advanced chip-level repairs, screen replacements, and data recovery.",
               "contact": {
                 "phone": "+91 98765 43210",
@@ -811,7 +811,7 @@
                   "id": 1,
                   "title": "6 Signs Your Phone Battery Needs Replacement",
                   "description": "Know the top signs that indicate your phone battery needs a replacement.",
-                  "image": "/blog/b1.png",
+                  "image": "/blog/b1.jpg",
                   "date": "May 24, 2024",
                   "category": "Maintenance",
                   "link": "/blog/battery-replacement"
@@ -820,7 +820,7 @@
                   "id": 2,
                   "title": "How to Protect Your Phone from Water Damage",
                   "description": "Simple tips to protect your phone from water damage and what to do...",
-                  "image": "/blog/b2.png",
+                  "image": "/blog/b2.jpg",
                   "date": "May 15, 2024",
                   "category": "Tips",
                   "link": "/blog/water-damage"
@@ -829,7 +829,7 @@
                   "id": 3,
                   "title": "Why Choose Professional Mobile Repair Services?",
                   "description": "Top reasons why professional repair is better than DIY solutions.",
-                  "image": "/blog/b3.png",
+                  "image": "/blog/b3.jpg",
                   "date": "May 10, 2024",
                   "category": "Services",
                   "link": "/blog/why-professional"
@@ -849,7 +849,7 @@
                   "id": 1,
                   "title": "5 Signs Your Phone Needs Professional Repair",
                   "description": "Know the top signs that indicate your phone needs professional repair.",
-                  "image": "/blog/b1.png",
+                  "image": "/blog/b1.jpg",
                   "date": "May 20, 2024",
                   "category": "Maintenance",
                   "link": "/blog/professional-repair"
@@ -858,7 +858,7 @@
                   "id": 2,
                   "title": "How to Protect Your Phone from Water Damage",
                   "description": "Simple tips to protect your phone from water damage and other liquids.",
-                  "image": "/blog/b2.png",
+                  "image": "/blog/b2.jpg",
                   "date": "May 15, 2024",
                   "category": "Tips",
                   "link": "/blog/water-damage"
@@ -867,7 +867,7 @@
                   "id": 3,
                   "title": "Why Choose Professional Mobile Repair Services?",
                   "description": "Top reasons why professional repair is better than DIY solutions.",
-                  "image": "/blog/b3.png",
+                  "image": "/blog/b3.jpg",
                   "date": "May 10, 2024",
                   "category": "Services",
                   "link": "/blog/why-professional"
@@ -876,7 +876,7 @@
                   "id": 4,
                   "title": "5 Signs Your Phone Needs Professional Repair",
                   "description": "Know the top signs that indicate your phone needs professional repair.",
-                  "image": "/blog/b1.png",
+                  "image": "/blog/b1.jpg",
                   "date": "May 20, 2024",
                   "category": "Maintenance",
                   "link": "/blog/professional-repair"
@@ -885,7 +885,7 @@
                   "id": 5,
                   "title": "How to Protect Your Phone from Water Damage",
                   "description": "Simple tips to protect your phone from water damage and other liquids.",
-                  "image": "/blog/b2.png",
+                  "image": "/blog/b2.jpg",
                   "date": "May 15, 2024",
                   "category": "Tips",
                   "link": "/blog/water-damage"
@@ -894,7 +894,7 @@
                   "id": 6,
                   "title": "Why Choose Professional Mobile Repair Services?",
                   "description": "Top reasons why professional repair is better than DIY solutions.",
-                  "image": "/blog/b3.png",
+                  "image": "/blog/b3.jpg",
                   "date": "May 10, 2024",
                   "category": "Services",
                   "link": "/blog/why-professional"
@@ -903,7 +903,7 @@
                   "id": 7,
                   "title": "6 Signs Your Phone Battery Needs Replacement",
                   "description": "Know the top signs that indicate your phone battery needs a replacement.",
-                  "image": "/blog/b1.png",
+                  "image": "/blog/b1.jpg",
                   "date": "May 05, 2024",
                   "category": "Maintenance",
                   "link": "/blog/battery-replacement"
@@ -912,7 +912,7 @@
                   "id": 8,
                   "title": "How to Protect Your Phone from Water Damage",
                   "description": "Simple tips to protect your phone from water damage and other liquids.",
-                  "image": "/blog/b2.png",
+                  "image": "/blog/b2.jpg",
                   "date": "Apr 28, 2024",
                   "category": "Tips",
                   "link": "/blog/water-damage"
@@ -921,7 +921,7 @@
                   "id": 9,
                   "title": "Why Choose Professional Mobile Repair Services?",
                   "description": "Top reasons why professional repair is better than DIY solutions.",
-                  "image": "/blog/b3.png",
+                  "image": "/blog/b3.jpg",
                   "date": "Apr 22, 2024",
                   "category": "Services",
                   "link": "/blog/why-professional"
@@ -940,9 +940,9 @@
                 "aboutButtonLink": "/book",
                 "recentTitle": "Recent Posts",
                 "recentPosts": [
-                  { "title": "5 Signs Your Phone Needs Professional Repair", "date": "May 20, 2024", "image": "/blog/b1.png", "href": "/blog/professional-repair" },
+                  { "title": "5 Signs Your Phone Needs Professional Repair", "date": "May 20, 2024", "image": "/blog/b1.jpg", "href": "/blog/professional-repair" },
                   { "title": "How to Extend Your Phone Battery Life", "date": "May 15, 2024", "image": "/gallery/battery-1.png", "href": "/blog/battery-replacement" },
-                  { "title": "What to Do If Your Phone Gets Wet", "date": "May 10, 2024", "image": "/blog/b2.png", "href": "/blog/water-damage" },
+                  { "title": "What to Do If Your Phone Gets Wet", "date": "May 10, 2024", "image": "/blog/b2.jpg", "href": "/blog/water-damage" },
                   { "title": "Best Mobile Accessories to Protect Your Phone", "date": "May 05, 2024", "image": "/gallery/others-2.jpg", "href": "/blog" },
                   { "title": "Software vs Hardware Issues: What's the Difference?", "date": "Apr 28, 2024", "image": "/gallery/others-4.jpg", "href": "/blog/why-professional" }
                 ],
@@ -970,14 +970,14 @@
                   "author": "By Fixaro Team",
                   "date": "May 20, 2024",
                   "readTime": "5 min read",
-                  "heroImage": "/blog/b1.png",
+                  "heroImage": "/blog/b1.jpg",
                   "intro": "Our smartphones have become an essential part of our daily lives. From staying connected to managing work and entertainment, we rely on our devices for almost everything. But like any piece of technology, phones can run into issues over time. Ignoring minor problems can lead to bigger, more expensive repairs down the line. Here are 5 clear signs that your phone needs professional attention.",
                   "signs": [
                     { "title": "1. Cracked or Damaged Screen", "image": "/gallery/screen-1.png", "text": "A cracked screen is more than just a cosmetic issue. It can worsen over time and affect touch responsiveness. It may also expose your phone to dust and moisture, causing further internal damage.", "bullet": "Professional screen replacement restores clarity and touch sensitivity." },
                     { "title": "2. Battery Drains Too Fast", "image": "/gallery/battery-1.png", "text": "If your phone battery doesn't last even half a day or shuts down suddenly, the battery may be worn out. A new battery can bring your phone back to life.", "bullet": "We use original batteries with full performance and safety standards." },
                     { "title": "3. Phone Overheats Frequently", "image": "/gallery/others-1.png", "text": "Some heating is normal, but if your phone gets too hot often, it could be due to software issues, a bad battery, or faulty internal components.", "bullet": "Our experts diagnose the real cause and fix it to keep your device safe." },
                     { "title": "4. Charging Problems", "image": "/gallery/charging-1.png", "text": "Loose charging port, slow charging, or not charging at all are common issues caused by dirt, wear and tear, or damaged parts.", "bullet": "We clean or replace your charging port with precision to restore safe and fast charging." },
-                    { "title": "5. App Crashes or Slow Performance", "image": "/blog/b3.png", "text": "If apps crash frequently or your phone lags even with simple tasks, it could be a sign of internal storage problems, software bugs, or hardware issues.", "bullet": "We optimize and repair your hardware for smooth and lag-free performance." }
+                    { "title": "5. App Crashes or Slow Performance", "image": "/blog/b3.jpg", "text": "If apps crash frequently or your phone lags even with simple tasks, it could be a sign of internal storage problems, software bugs, or hardware issues.", "bullet": "We optimize and repair your hardware for smooth and lag-free performance." }
                   ]
                 },
                 {
@@ -988,14 +988,14 @@
                   "author": "By Fixaro Team",
                   "date": "May 15, 2024",
                   "readTime": "4 min read",
-                  "heroImage": "/blog/b2.png",
+                  "heroImage": "/blog/b2.jpg",
                   "intro": "Water and electronics never mix well. A small spill or a rainy commute can turn into a costly repair if you don't act quickly. These practical steps help you prevent damage and know what to do if your phone gets wet.",
                   "signs": [
                     { "title": "1. Keep Liquids Away", "image": "/gallery/water-1.png", "text": "Avoid using your phone near sinks, pools and while charging in humid bathrooms. Even a few drops can enter speaker grills and charging ports.", "bullet": "A simple habit of keeping drinks away from your desk can save your device." },
                     { "title": "2. Use a Protective Case", "image": "/gallery/others-2.jpg", "text": "A sealed case and port covers add a layer of protection against splashes and light rain, especially if your phone is not officially water resistant.", "bullet": "We can also inspect seals and ports after any liquid exposure." },
                     { "title": "3. Act Fast If It Gets Wet", "image": "/gallery/water-1.png", "text": "Power it off immediately, do not charge it, and do not use heat tools like a hair dryer. Bring it to a technician as soon as possible.", "bullet": "Quick professional drying and diagnosis greatly improves recovery chances." },
                     { "title": "4. Skip the Rice Myth", "image": "/gallery/others-3.jpg", "text": "Rice does not remove moisture from internal boards and can leave starch dust inside ports. It often delays proper repair.", "bullet": "Let experts open, clean and test the device the right way." },
-                    { "title": "5. Get It Checked Professionally", "image": "/blog/b2.png", "text": "Corrosion can start hours after a spill even if the phone still turns on. A checkup now can prevent a dead device later.", "bullet": "Our water-damage service includes inspection, cleaning and functional testing." }
+                    { "title": "5. Get It Checked Professionally", "image": "/blog/b2.jpg", "text": "Corrosion can start hours after a spill even if the phone still turns on. A checkup now can prevent a dead device later.", "bullet": "Our water-damage service includes inspection, cleaning and functional testing." }
                   ]
                 },
                 {
@@ -1006,14 +1006,14 @@
                   "author": "By Fixaro Team",
                   "date": "May 10, 2024",
                   "readTime": "4 min read",
-                  "heroImage": "/blog/b3.png",
+                  "heroImage": "/blog/b3.jpg",
                   "intro": "DIY videos make repairs look easy, but one wrong screw or a cheap part can permanently damage your phone. Professional repair protects your device, data and warranty with the right tools and genuine parts.",
                   "signs": [
                     { "title": "1. Genuine Parts Matter", "image": "/gallery/screen-2.jpg", "text": "Low-quality screens and batteries fail quickly and can even be unsafe. Certified parts keep display quality, battery life and safety at original levels.", "bullet": "We use genuine and high-grade parts for lasting results." },
                     { "title": "2. Expert Diagnosis", "image": "/gallery/workshop-1.png", "text": "A lagging phone may be software, storage or hardware. Guessing the issue often leads to replacing the wrong part.", "bullet": "Our technicians isolate the real cause before any repair starts." },
                     { "title": "3. The Right Tools", "image": "/gallery/devices-1.png", "text": "Opening modern phones needs heat pads, suction tools and ESD-safe benches. Kitchen tools easily crack glass or tear flex cables.", "bullet": "Professional tools keep the repair clean, safe and precise." },
                     { "title": "4. Warranty Protection", "image": "/gallery/battery-2.jpg", "text": "Most DIY attempts void remaining coverage. A proper service invoice and warranty give you peace of mind after the job.", "bullet": "We provide up to 90 days warranty on most repairs." },
-                    { "title": "5. Faster, Safer Turnaround", "image": "/blog/b3.png", "text": "What takes hours at home is often done in 30–60 minutes in the workshop, with quality checks before handover.", "bullet": "Book a repair and get your phone back working like new." }
+                    { "title": "5. Faster, Safer Turnaround", "image": "/blog/b3.jpg", "text": "What takes hours at home is often done in 30–60 minutes in the workshop, with quality checks before handover.", "bullet": "Book a repair and get your phone back working like new." }
                   ]
                 },
                 {
@@ -1024,7 +1024,7 @@
                   "author": "By Fixaro Team",
                   "date": "May 24, 2024",
                   "readTime": "4 min read",
-                  "heroImage": "/blog/b1.png",
+                  "heroImage": "/blog/b1.jpg",
                   "intro": "Batteries wear out with every charge cycle. If your phone feels slower, hotter or dies too soon, it may be time for a replacement rather than a new device.",
                   "signs": [
                     { "title": "1. Charge Does Not Last", "image": "/gallery/battery-1.png", "text": "If you need to plug in more than twice a day with normal use, battery health has likely dropped.", "bullet": "A genuine replacement restores all-day backup." },
@@ -1046,7 +1046,7 @@
                 { "label": "Home", "url": "/" },
                 { "label": "About Us", "url": "/about" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbWhyChooseUs": {
               "title": "Why Choose Us",
@@ -1054,7 +1054,7 @@
                 { "label": "Home", "url": "/" },
                 { "label": "Why Choose Us", "url": "/why-choose-us" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbOurTeams": {
               "title": "Our Teams",
@@ -1062,7 +1062,7 @@
                 { "label": "Home", "url": "/" },
                 { "label": "Our Teams", "url": "/team" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbBrandsWeRepair": {
               "title": "Brands We Repair",
@@ -1070,7 +1070,7 @@
                 { "label": "Home", "url": "/" },
                 { "label": "Brands We Repair", "url": "/brands-we-repair" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbServices": {
               "title": "Repair Service",
@@ -1078,7 +1078,7 @@
                 { "label": "Home", "url": "/" },
                 { "label": "Repair Service", "url": "/services" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbServiceDetail": {
               "title": "Service Detail",
@@ -1086,7 +1086,7 @@
                 { "label": "Home", "url": "/" },
                 { "label": "Service Detail", "url": "/services" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbBook": {
               "title": "Book A Repair",
@@ -1094,7 +1094,7 @@
                 { "label": "Home", "url": "/" },
                 { "label": "Book A Repair", "url": "/book" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbPricing": {
               "title": "Pricing",
@@ -1102,7 +1102,7 @@
                 { "label": "Home", "url": "/" },
                 { "label": "Pricing", "url": "/pricing" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbGallery": {
               "title": "Our Gallery",
@@ -1110,7 +1110,7 @@
                 { "label": "Home", "url": "/" },
                 { "label": "Our Gallery", "url": "/gallery" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbTestimonials": {
               "title": "Testimonial",
@@ -1118,7 +1118,7 @@
                 { "label": "Home", "url": "/" },
                 { "label": "Testimonial", "url": "/testimonials" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbFaq": {
               "title": "FAQs",
@@ -1126,7 +1126,7 @@
                 { "label": "Home", "url": "/" },
                 { "label": "FAQs", "url": "/faq" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbBlog": {
               "title": "Blogs",
@@ -1134,7 +1134,7 @@
                 { "label": "Home", "url": "/" },
                 { "label": "Blogs", "url": "/blog" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbBlogDetail": {
               "title": "Blog Detail",
@@ -1143,7 +1143,7 @@
                 { "label": "Blogs", "url": "/blog" },
                 { "label": "Blog Detail", "url": "/blog" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbContact": {
               "title": "Contact Us",
@@ -1151,7 +1151,7 @@
                 { "label": "Home", "url": "/" },
                 { "label": "Contact Us", "url": "/contact" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbCareer": {
               "title": "Career",
@@ -1159,7 +1159,7 @@
                 { "label": "Home", "url": "/" },
                 { "label": "Career", "url": "/career" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             },
             "RepairBreadcrumbCareerDetail": {
               "title": "Career Detail",
@@ -1168,7 +1168,7 @@
                 { "label": "Career", "url": "/career" },
                 { "label": "Career Detail", "url": "/career" }
               ],
-              "bgImage": "/img/footerbg.png"
+              "bgImage": "/img/footerbg.jpg"
             }
           }
         },
@@ -1514,7 +1514,7 @@
         "Policy": {
           "variants": {
             "RepairPolicy": {
-              "bgImage": "/img/footerbg.png",
+              "bgImage": "/img/footerbg.jpg",
               "pages": [
                 {
                   "slug": "warranty-policy",

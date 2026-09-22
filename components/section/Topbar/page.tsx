@@ -56,7 +56,7 @@ export default function Topbar({ data }: { data: HeaderData }) {
               }
 
               return (
-                <a key={idx} href={social.url} target="_blank" rel="noopener noreferrer" className={`w-[26px] h-[26px] flex items-center justify-center rounded text-white hover:opacity-80 transition-opacity ${bgClass}`}>
+                <a key={idx} href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.platform} className={`w-11 h-11 flex items-center justify-center rounded text-white hover:opacity-80 transition-opacity ${bgClass}`}>
                   {iconSvg}
                 </a>
               );

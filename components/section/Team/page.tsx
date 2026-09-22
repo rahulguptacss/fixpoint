@@ -1,5 +1,5 @@
 import React from 'react';
-import * as LucideIcons from 'lucide-react';
+import Image from 'next/image';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { TeamData } from '../../types';
@@ -13,9 +13,9 @@ export default function Team({ data }: { data: TeamData }) {
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-10">
           <div className="inline-block relative mb-4">
-            <h4 className="text-[#1877F2] font-bold text-[16px] md:text-[18px] uppercase tracking-widest pb-1">
+            <p className="text-[#1558C0] font-bold text-[16px] md:text-[18px] uppercase tracking-widest pb-1">
               {data.subtitle}
-            </h4>
+            </p>
             <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-10 h-[2px] bg-[#1877F2]"></div>
           </div>
           
@@ -33,12 +33,15 @@ export default function Team({ data }: { data: TeamData }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {data.members.map((member) => (
             <div key={member.id} className="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group relative">
-              <div className="h-64 overflow-hidden">
-                <Link href={`/team/${member.id}`}>
-                  <img 
+              <div className="relative h-64 overflow-hidden">
+                <Link href={`/team/${member.id}`} aria-label={`View profile of ${member.name}`}>
+                  <Image 
                     src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" 
+                    alt={member.name}
+                    fill
+                    loading="lazy"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500" 
                   />
                 </Link>
               </div>
@@ -47,12 +50,11 @@ export default function Team({ data }: { data: TeamData }) {
                 {/* Social links */}
                 <div className="flex justify-center space-x-3 mb-3">
                   {member.socials.map((social, idx) => {
-                    let IconComponent: any = LucideIcons.Link;
-                    let isLucide = true;
-                    if (social.platform === 'facebook') { IconComponent = FaFacebookF; isLucide = false; }
-                    if (social.platform === 'instagram') { IconComponent = FaInstagram; isLucide = false; }
-                    if (social.platform === 'linkedin') { IconComponent = FaLinkedinIn; isLucide = false; }
-                    if (social.platform === 'twitter') { IconComponent = FaXTwitter; isLucide = false; }
+                    let IconComponent: any = FaFacebookF;
+                    if (social.platform === 'facebook') IconComponent = FaFacebookF;
+                    if (social.platform === 'instagram') IconComponent = FaInstagram;
+                    if (social.platform === 'linkedin') IconComponent = FaLinkedinIn;
+                    if (social.platform === 'twitter') IconComponent = FaXTwitter;
                     
                     return (
                       <a 
@@ -60,9 +62,10 @@ export default function Team({ data }: { data: TeamData }) {
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-[#1877F2] text-white w-9 h-9 rounded-full flex items-center justify-center hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300"
+                        aria-label={`${member.name} on ${social.platform}`}
+                        className="bg-[#1558C0] text-white w-11 h-11 rounded-full flex items-center justify-center hover:bg-blue-800 transition-all duration-300"
                       >
-                        <IconComponent className="w-4 h-4" {...(isLucide ? { strokeWidth: 2 } : {})} />
+                        <IconComponent className="w-4 h-4" aria-hidden />
                       </a>
                     );
                   })}
@@ -71,7 +74,7 @@ export default function Team({ data }: { data: TeamData }) {
                 <Link href={`/team/${member.id}`}>
                   <h3 className="text-[22px] font-bold text-[#021731] mb-1 hover:text-[#1877F2] transition-colors cursor-pointer">{member.name}</h3>
                 </Link>
-                <p className="text-[#1877F2] text-[15px] font-medium">{member.role}</p>
+                <p className="text-[#1558C0] text-[15px] font-medium">{member.role}</p>
                 <div className="w-10 h-[2px] bg-[#1877F2] mx-auto mt-2 rounded-full"></div>
               </div>
             </div>

@@ -131,8 +131,11 @@ export default function Header({ data }: { data: HeaderData }) {
     return (
       <div className="relative" onMouseEnter={show} onMouseLeave={hide}>
         <button
+          type="button"
+          aria-expanded={open}
+          aria-haspopup="true"
           className={`flex items-center text-[18px] font-semibold transition-colors ${
-            hasActive(item) || open ? 'text-[#1877F2]' : 'text-[#021731] hover:text-[#1877F2]'
+            hasActive(item) || open ? 'text-[#1558C0]' : 'text-[#021731] hover:text-[#1558C0]'
           }`}
         >
           {item.label}
@@ -233,11 +236,14 @@ export default function Header({ data }: { data: HeaderData }) {
           <div className={`flex justify-between items-center transition-all duration-300 ease-in-out ${isScrolled ? 'h-[70px]' : 'h-[85px]'}`}>
             
             <div className="flex-shrink-0 flex items-center h-full">
-              <Link href="/">
-                <img 
-                  src="/logo/logo.png" 
-                  alt="FixPoint Logo" 
-                  className={`w-auto object-contain transition-all duration-300 ease-in-out ${isScrolled ? 'h-[65px]' : 'h-[85px]'}`} 
+              <Link href="/" aria-label="FixPoint home">
+                <img
+                  src="/logo/logo.png"
+                  alt="FixPoint"
+                  width={200}
+                  height={85}
+                  decoding="async"
+                  className={`w-auto object-contain ${isScrolled ? "h-[65px]" : "h-[85px]"}`}
                 />
               </Link>
             </div>
@@ -265,7 +271,7 @@ export default function Header({ data }: { data: HeaderData }) {
             <div className="hidden md:flex items-center">
               <Link 
                 href="/book"
-                className={`bg-[#1877F2] hover:bg-blue-600 text-white font-semibold text-[16.5px] rounded-md transition-all duration-300 shadow-sm hover:shadow-md ${isScrolled ? 'py-[10px] px-[28px]' : 'py-[14px] px-[32px]'}`}
+                className={`bg-[#1558C0] hover:bg-blue-700 text-white font-semibold text-[16.5px] rounded-md transition-all duration-300 shadow-sm hover:shadow-md ${isScrolled ? 'py-[10px] px-[28px]' : 'py-[14px] px-[32px]'}`}
               >
                 {data.button.label}
               </Link>
@@ -273,9 +279,11 @@ export default function Header({ data }: { data: HeaderData }) {
             
             <div className="flex items-center md:hidden">
               <button 
+                type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-gray-900 hover:text-[#1877F2] focus:outline-none p-2 transition-colors"
-                aria-label="Toggle mobile menu"
+                className="text-gray-900 hover:text-[#1558C0] focus:outline-none p-2 transition-colors min-w-11 min-h-11"
+                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isMobileMenuOpen}
               >
                 <svg className="w-8 h-8 transition-transform duration-300 ease-in-out" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   {isMobileMenuOpen ? (

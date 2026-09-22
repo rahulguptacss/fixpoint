@@ -1,114 +1,53 @@
-"use client";
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-import * as LucideIcons from 'lucide-react';
-import { HeroData } from '../../types';
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { HeroData } from "../../types";
+import HeroVideoButton from "./HeroVideoButton";
 
 export default function Hero({ data }: { data: HeroData }) {
-  const [isMounted, setIsMounted] = useState(false);
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   return (
-    <section className="relative w-full bg-black text-white overflow-hidden" style={{ fontFamily: 'var(--font-inter), sans-serif' }}>
-      
-      {/* Custom Styles for Animation */}
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in-up {
-          opacity: 0;
-          animation: fadeInUp 0.8s ease-out forwards;
-        }
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
-      `}} />
-
-      {/* Background Image Overlay */}
-      <div 
-        className={`absolute inset-0 bg-cover bg-[position:80%_center] md:bg-center bg-no-repeat transition-opacity duration-1000 ${isMounted ? 'opacity-100' : 'opacity-0'}`}
-        style={{ 
-          backgroundImage: `url('/hero/herocover.png')`,
-          filter: 'brightness(0.8)'
-        }}
-      />
-      
-      {/* Dark Gradient Overlay for text readability */}
+    <section
+      className="relative w-full min-h-[520px] md:min-h-[560px] bg-black text-white overflow-hidden"
+      style={{ fontFamily: "var(--font-inter), sans-serif" }}
+    >
+      <picture>
+        <source media="(max-width: 768px)" srcSet="/hero/herocover-mobile.jpg" type="image/jpeg" />
+        <img
+          src="/hero/herocover.jpg"
+          alt="Technician repairing a smartphone"
+          width={1400}
+          height={689}
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover object-[80%_center] md:object-center brightness-[0.8]"
+        />
+      </picture>
       <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-20 flex flex-col md:flex-row items-center justify-between">
-        
-        {/* Left Content */}
         <div className="w-full md:w-[60%] lg:w-[50%]">
-          {/* Badge */}
-          <div className="animate-fade-in-up inline-block bg-[#1877F2] text-white text-[13px] font-semibold px-4 py-1.5 rounded-md mb-6 shadow-sm">
+          <p className="inline-block bg-[#1558C0] text-white text-[13px] font-semibold px-4 py-1.5 rounded-md mb-6">
             {data.badge}
-          </div>
-          
-          {/* Title */}
-          <h1 className="animate-fade-in-up delay-100 text-[56px] md:text-[64px] font-bold leading-[1.1] mb-6 tracking-tight">
-            {data.titlePart1}<span className="text-[#1877F2]">.</span><br />
-            {data.titleHighlight}<span className="text-[#1877F2]">.</span>
-          </h1>
-          
-          {/* Description */}
-          <p className="animate-fade-in-up delay-200 text-[18px] text-gray-300 mb-10 leading-relaxed max-w-lg">
-            {data.description}
           </p>
-          
-          {/* Buttons */}
-          <div className="animate-fade-in-up delay-300 flex flex-col md:flex-row gap-6 md:gap-4 items-start md:items-center">
-            <Link 
+          <h1 className="text-[40px] sm:text-[56px] md:text-[64px] font-bold leading-[1.1] mb-6 tracking-tight">
+            {data.titlePart1}
+            <span className="text-[#4DA3FF]">.</span>
+            <br />
+            {data.titleHighlight}
+            <span className="text-[#4DA3FF]">.</span>
+          </h1>
+          <p className="text-[18px] text-gray-200 mb-10 leading-relaxed max-w-lg">{data.description}</p>
+          <div className="flex flex-col md:flex-row gap-6 md:gap-4 items-start md:items-center">
+            <Link
               href={data.buttonPrimary.href}
-              className="inline-flex w-fit bg-[#1877F2] hover:bg-blue-600 text-white font-semibold text-[16px] py-[14px] px-[32px] rounded-md items-center transition-all duration-300 shadow-[0_4px_14px_0_rgba(24,119,242,0.39)] hover:shadow-[0_6px_20px_rgba(24,119,242,0.23)] hover:-translate-y-0.5"
+              className="inline-flex w-fit bg-[#1558C0] hover:bg-blue-700 text-white font-semibold text-[16px] py-[14px] px-[32px] rounded-md items-center"
             >
               {data.buttonPrimary.label}
-              <LucideIcons.ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" aria-hidden />
             </Link>
-            
-            <button 
-              onClick={(e) => { e.preventDefault(); setIsVideoOpen(true); }}
-              className="flex items-center gap-4 text-white font-semibold text-[16px] transition-all duration-300 hover:opacity-80 group"
-            >
-              <div className="bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-110">
-                <LucideIcons.Play className="w-5 h-5 ml-1 text-[#1877F2] fill-[#1877F2]" />
-              </div>
-              {data.buttonSecondary.label}
-            </button>
+            <HeroVideoButton label={data.buttonSecondary.label} videoUrl={data.videoUrl} />
           </div>
         </div>
-        
       </div>
-
-      {/* Video Modal */}
-      {isVideoOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4" style={{ animation: 'fadeIn 0.3s ease-out' }}>
-          <style dangerouslySetInnerHTML={{__html: `@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }`}} />
-          <div className="relative w-full max-w-4xl bg-black rounded-lg shadow-2xl overflow-hidden aspect-video transform transition-all">
-            <button 
-              onClick={() => setIsVideoOpen(false)}
-              className="absolute top-4 right-4 z-10 text-white/70 hover:text-white bg-black/50 hover:bg-black/80 p-2 rounded-full transition-all"
-            >
-              <LucideIcons.X className="w-6 h-6" />
-            </button>
-            <iframe 
-              className="w-full h-full"
-              src={data.videoUrl || "https://www.youtube.com/embed/R2_4e1a0m6U?autoplay=1"}  
-              title="Repair Video" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-      )}
-
     </section>
   );
 }
